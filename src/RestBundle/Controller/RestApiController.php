@@ -36,16 +36,20 @@
 				} else {
 
 				// creating a list of the album ids and provider types.
-				$ids_provider_type = '';
+				$ids_provider_type =array();
+				$id = array();
+				$type = array();
 				foreach ($topAlbumsList as $topAlbum) {
 					if ($topAlbum->getAlbum() != 0) {
 						if (empty($ids_provider_type)) {
-							$ids_provider_type .= "(" . $topAlbum->getAlbum() . ",'" . $topAlbum->getProviderType() . "')";
-						} else {
-							$ids_provider_type .= ',(' . $topAlbum->getAlbum() . ",'" . $topAlbum->getProviderType() . "')";
+							$id[] 	= $topAlbum->getAlbum();
+							$type[]	= "'".$topAlbum->getProviderType()."'";
 						}
 					}
 				}
+
+				$ids_provider_type = array('id'=>$id,'type'=>$type);
+
 
 				// Gets the album info for each album on the list
 				if ($ids_provider_type != '') {

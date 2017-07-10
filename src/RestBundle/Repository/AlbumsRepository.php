@@ -33,8 +33,8 @@
 
 			->leftJoin("RestBundle:".ucfirst(strtolower($territory)).'Countries', "c",
 			    "WITH","c.prodid = s.prodid AND c.providerType = s.providerType AND c.downloadstatus = 1 AND c.salesdate != '' AND c.salesdate < '".$nowDate."'")
-			//->where("(a.prodid, a.providerType) IN (" . rtrim($ids_provider_type, ',') . ")")
-
+			->where("a.prodid IN (".implode(',', $ids_provider_type['id']).")" )
+			->andwhere("a.providerType IN (".implode(',', $ids_provider_type['type']).")")
 			->groupby('a.prodid')
             ->orderBy('sortID', 'ASC')
             ->setMaxResults( $limit )
