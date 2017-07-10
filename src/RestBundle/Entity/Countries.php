@@ -50,5 +50,110 @@ class Countries
     private $prodid;
 
 
-}
 
+    /**
+     * Set territory
+     *
+     * @param string $territory
+     *
+     * @return Countries
+     */
+    public function setTerritory($territory)
+    {
+        $this->territory = $territory;
+
+        return $this;
+    }
+
+    /**
+     * Get territory
+     *
+     * @return string
+     */
+    public function getTerritory()
+    {
+        return $this->territory;
+    }
+
+    /**
+     * Set salesdate
+     *
+     * @param \DateTime $salesdate
+     *
+     * @return Countries
+     */
+    public function setSalesdate($salesdate)
+    {
+        $this->salesdate = $salesdate;
+
+        return $this;
+    }
+
+    /**
+     * Get salesdate
+     *
+     * @return \DateTime
+     */
+    public function getSalesdate()
+    {
+        return $this->salesdate;
+    }
+
+    /**
+     * Set territoryid
+     *
+     * @param integer $territoryid
+     *
+     * @return Countries
+     */
+    public function setTerritoryid($territoryid)
+    {
+        $this->territoryid = $territoryid;
+
+        return $this;
+    }
+
+    /**
+     * Get territoryid
+     *
+     * @return integer
+     */
+    public function getTerritoryid()
+    {
+        return $this->territoryid;
+    }
+
+    /**
+     * Set providerType
+     *
+     * @param string $providerType
+     *
+     * @return Countries
+     */
+    public function setProviderType($providerType)
+    {
+        $this->providerType = $providerType;
+
+        return $this;
+    }
+
+    /**
+     * Get providerType
+     *
+     * @return string
+     */
+    public function getProviderType()
+    {
+        return $this->providerType;
+    }
+
+    /**
+     * Get prodid
+     *
+     * @return integer
+     */
+    public function getProdid()
+    {
+        return $this->prodid;
+    }
+}

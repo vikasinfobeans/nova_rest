@@ -47,5 +47,100 @@ class Downloadgenres
     private $genreName;
 
 
-}
 
+    /**
+     * Set total
+     *
+     * @param integer $total
+     *
+     * @return Downloadgenres
+     */
+    public function setTotal($total)
+    {
+        $this->total = $total;
+
+        return $this;
+    }
+
+    /**
+     * Get total
+     *
+     * @return integer
+     */
+    public function getTotal()
+    {
+        return $this->total;
+    }
+
+    /**
+     * Set downloadDate
+     *
+     * @param \DateTime $downloadDate
+     *
+     * @return Downloadgenres
+     */
+    public function setDownloadDate($downloadDate)
+    {
+        $this->downloadDate = $downloadDate;
+
+        return $this;
+    }
+
+    /**
+     * Get downloadDate
+     *
+     * @return \DateTime
+     */
+    public function getDownloadDate()
+    {
+        return $this->downloadDate;
+    }
+
+    /**
+     * Set libraryId
+     *
+     * @param integer $libraryId
+     *
+     * @return Downloadgenres
+     */
+    public function setLibraryId($libraryId)
+    {
+        $this->libraryId = $libraryId;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryId
+     *
+     * @return integer
+     */
+    public function getLibraryId()
+    {
+        return $this->libraryId;
+    }
+
+    /**
+     * Set genreName
+     *
+     * @param string $genreName
+     *
+     * @return Downloadgenres
+     */
+    public function setGenreName($genreName)
+    {
+        $this->genreName = $genreName;
+
+        return $this;
+    }
+
+    /**
+     * Get genreName
+     *
+     * @return string
+     */
+    public function getGenreName()
+    {
+        return $this->genreName;
+    }
+}

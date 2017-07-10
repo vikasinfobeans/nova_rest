@@ -50,5 +50,110 @@ class NotificationSubscriptions
     private $id;
 
 
-}
 
+    /**
+     * Set libraryId
+     *
+     * @param integer $libraryId
+     *
+     * @return NotificationSubscriptions
+     */
+    public function setLibraryId($libraryId)
+    {
+        $this->libraryId = $libraryId;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryId
+     *
+     * @return integer
+     */
+    public function getLibraryId()
+    {
+        return $this->libraryId;
+    }
+
+    /**
+     * Set patronId
+     *
+     * @param string $patronId
+     *
+     * @return NotificationSubscriptions
+     */
+    public function setPatronId($patronId)
+    {
+        $this->patronId = $patronId;
+
+        return $this;
+    }
+
+    /**
+     * Get patronId
+     *
+     * @return string
+     */
+    public function getPatronId()
+    {
+        return $this->patronId;
+    }
+
+    /**
+     * Set emailId
+     *
+     * @param string $emailId
+     *
+     * @return NotificationSubscriptions
+     */
+    public function setEmailId($emailId)
+    {
+        $this->emailId = $emailId;
+
+        return $this;
+    }
+
+    /**
+     * Get emailId
+     *
+     * @return string
+     */
+    public function getEmailId()
+    {
+        return $this->emailId;
+    }
+
+    /**
+     * Set createdDate
+     *
+     * @param \DateTime $createdDate
+     *
+     * @return NotificationSubscriptions
+     */
+    public function setCreatedDate($createdDate)
+    {
+        $this->createdDate = $createdDate;
+
+        return $this;
+    }
+
+    /**
+     * Get createdDate
+     *
+     * @return \DateTime
+     */
+    public function getCreatedDate()
+    {
+        return $this->createdDate;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+}

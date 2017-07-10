@@ -43,5 +43,86 @@ class CombineGenres
     private $id;
 
 
-}
 
+    /**
+     * Set genre
+     *
+     * @param string $genre
+     *
+     * @return CombineGenres
+     */
+    public function setGenre($genre)
+    {
+        $this->genre = $genre;
+
+        return $this;
+    }
+
+    /**
+     * Get genre
+     *
+     * @return string
+     */
+    public function getGenre()
+    {
+        return $this->genre;
+    }
+
+    /**
+     * Set expectedGenre
+     *
+     * @param string $expectedGenre
+     *
+     * @return CombineGenres
+     */
+    public function setExpectedGenre($expectedGenre)
+    {
+        $this->expectedGenre = $expectedGenre;
+
+        return $this;
+    }
+
+    /**
+     * Get expectedGenre
+     *
+     * @return string
+     */
+    public function getExpectedGenre()
+    {
+        return $this->expectedGenre;
+    }
+
+    /**
+     * Set updateGenre
+     *
+     * @param boolean $updateGenre
+     *
+     * @return CombineGenres
+     */
+    public function setUpdateGenre($updateGenre)
+    {
+        $this->updateGenre = $updateGenre;
+
+        return $this;
+    }
+
+    /**
+     * Get updateGenre
+     *
+     * @return boolean
+     */
+    public function getUpdateGenre()
+    {
+        return $this->updateGenre;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+}

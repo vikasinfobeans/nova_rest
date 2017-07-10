@@ -50,5 +50,110 @@ class FeaturedVideos
     private $id;
 
 
-}
 
+    /**
+     * Set prodid
+     *
+     * @param integer $prodid
+     *
+     * @return FeaturedVideos
+     */
+    public function setProdid($prodid)
+    {
+        $this->prodid = $prodid;
+
+        return $this;
+    }
+
+    /**
+     * Get prodid
+     *
+     * @return integer
+     */
+    public function getProdid()
+    {
+        return $this->prodid;
+    }
+
+    /**
+     * Set territory
+     *
+     * @param string $territory
+     *
+     * @return FeaturedVideos
+     */
+    public function setTerritory($territory)
+    {
+        $this->territory = $territory;
+
+        return $this;
+    }
+
+    /**
+     * Get territory
+     *
+     * @return string
+     */
+    public function getTerritory()
+    {
+        return $this->territory;
+    }
+
+    /**
+     * Set language
+     *
+     * @param string $language
+     *
+     * @return FeaturedVideos
+     */
+    public function setLanguage($language)
+    {
+        $this->language = $language;
+
+        return $this;
+    }
+
+    /**
+     * Get language
+     *
+     * @return string
+     */
+    public function getLanguage()
+    {
+        return $this->language;
+    }
+
+    /**
+     * Set providerType
+     *
+     * @param string $providerType
+     *
+     * @return FeaturedVideos
+     */
+    public function setProviderType($providerType)
+    {
+        $this->providerType = $providerType;
+
+        return $this;
+    }
+
+    /**
+     * Get providerType
+     *
+     * @return string
+     */
+    public function getProviderType()
+    {
+        return $this->providerType;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+}

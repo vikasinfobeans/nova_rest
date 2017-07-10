@@ -43,5 +43,86 @@ class UserAgents
     private $id;
 
 
-}
 
+    /**
+     * Set deviceString
+     *
+     * @param string $deviceString
+     *
+     * @return UserAgents
+     */
+    public function setDeviceString($deviceString)
+    {
+        $this->deviceString = $deviceString;
+
+        return $this;
+    }
+
+    /**
+     * Get deviceString
+     *
+     * @return string
+     */
+    public function getDeviceString()
+    {
+        return $this->deviceString;
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     *
+     * @return UserAgents
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * Set requireMp3
+     *
+     * @param string $requireMp3
+     *
+     * @return UserAgents
+     */
+    public function setRequireMp3($requireMp3)
+    {
+        $this->requireMp3 = $requireMp3;
+
+        return $this;
+    }
+
+    /**
+     * Get requireMp3
+     *
+     * @return string
+     */
+    public function getRequireMp3()
+    {
+        return $this->requireMp3;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+}

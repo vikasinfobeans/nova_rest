@@ -54,5 +54,124 @@ class Downloadpatrons
     private $patronId;
 
 
-}
 
+    /**
+     * Set email
+     *
+     * @param string $email
+     *
+     * @return Downloadpatrons
+     */
+    public function setEmail($email)
+    {
+        $this->email = $email;
+
+        return $this;
+    }
+
+    /**
+     * Get email
+     *
+     * @return string
+     */
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    /**
+     * Set total
+     *
+     * @param integer $total
+     *
+     * @return Downloadpatrons
+     */
+    public function setTotal($total)
+    {
+        $this->total = $total;
+
+        return $this;
+    }
+
+    /**
+     * Get total
+     *
+     * @return integer
+     */
+    public function getTotal()
+    {
+        return $this->total;
+    }
+
+    /**
+     * Set downloadDate
+     *
+     * @param \DateTime $downloadDate
+     *
+     * @return Downloadpatrons
+     */
+    public function setDownloadDate($downloadDate)
+    {
+        $this->downloadDate = $downloadDate;
+
+        return $this;
+    }
+
+    /**
+     * Get downloadDate
+     *
+     * @return \DateTime
+     */
+    public function getDownloadDate()
+    {
+        return $this->downloadDate;
+    }
+
+    /**
+     * Set libraryId
+     *
+     * @param integer $libraryId
+     *
+     * @return Downloadpatrons
+     */
+    public function setLibraryId($libraryId)
+    {
+        $this->libraryId = $libraryId;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryId
+     *
+     * @return integer
+     */
+    public function getLibraryId()
+    {
+        return $this->libraryId;
+    }
+
+    /**
+     * Set patronId
+     *
+     * @param string $patronId
+     *
+     * @return Downloadpatrons
+     */
+    public function setPatronId($patronId)
+    {
+        $this->patronId = $patronId;
+
+        return $this;
+    }
+
+    /**
+     * Get patronId
+     *
+     * @return string
+     */
+    public function getPatronId()
+    {
+        return $this->patronId;
+    }
+}

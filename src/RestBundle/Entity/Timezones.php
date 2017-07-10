@@ -36,5 +36,62 @@ class Timezones
     private $id;
 
 
-}
 
+    /**
+     * Set countryCode
+     *
+     * @param string $countryCode
+     *
+     * @return Timezones
+     */
+    public function setCountryCode($countryCode)
+    {
+        $this->countryCode = $countryCode;
+
+        return $this;
+    }
+
+    /**
+     * Get countryCode
+     *
+     * @return string
+     */
+    public function getCountryCode()
+    {
+        return $this->countryCode;
+    }
+
+    /**
+     * Set zoneName
+     *
+     * @param string $zoneName
+     *
+     * @return Timezones
+     */
+    public function setZoneName($zoneName)
+    {
+        $this->zoneName = $zoneName;
+
+        return $this;
+    }
+
+    /**
+     * Get zoneName
+     *
+     * @return string
+     */
+    public function getZoneName()
+    {
+        return $this->zoneName;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+}

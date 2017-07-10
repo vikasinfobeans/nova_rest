@@ -78,5 +78,206 @@ class ProductOffer
     private $productOfferId;
 
 
-}
 
+    /**
+     * Set labelProductOfferCode
+     *
+     * @param string $labelProductOfferCode
+     *
+     * @return ProductOffer
+     */
+    public function setLabelProductOfferCode($labelProductOfferCode)
+    {
+        $this->labelProductOfferCode = $labelProductOfferCode;
+
+        return $this;
+    }
+
+    /**
+     * Get labelProductOfferCode
+     *
+     * @return string
+     */
+    public function getLabelProductOfferCode()
+    {
+        return $this->labelProductOfferCode;
+    }
+
+    /**
+     * Set corpCode
+     *
+     * @param string $corpCode
+     *
+     * @return ProductOffer
+     */
+    public function setCorpCode($corpCode)
+    {
+        $this->corpCode = $corpCode;
+
+        return $this;
+    }
+
+    /**
+     * Get corpCode
+     *
+     * @return string
+     */
+    public function getCorpCode()
+    {
+        return $this->corpCode;
+    }
+
+    /**
+     * Set labelCode
+     *
+     * @param string $labelCode
+     *
+     * @return ProductOffer
+     */
+    public function setLabelCode($labelCode)
+    {
+        $this->labelCode = $labelCode;
+
+        return $this;
+    }
+
+    /**
+     * Get labelCode
+     *
+     * @return string
+     */
+    public function getLabelCode()
+    {
+        return $this->labelCode;
+    }
+
+    /**
+     * Set reportingId
+     *
+     * @param string $reportingId
+     *
+     * @return ProductOffer
+     */
+    public function setReportingId($reportingId)
+    {
+        $this->reportingId = $reportingId;
+
+        return $this;
+    }
+
+    /**
+     * Get reportingId
+     *
+     * @return string
+     */
+    public function getReportingId()
+    {
+        return $this->reportingId;
+    }
+
+    /**
+     * Set exclusiveInd
+     *
+     * @param string $exclusiveInd
+     *
+     * @return ProductOffer
+     */
+    public function setExclusiveInd($exclusiveInd)
+    {
+        $this->exclusiveInd = $exclusiveInd;
+
+        return $this;
+    }
+
+    /**
+     * Get exclusiveInd
+     *
+     * @return string
+     */
+    public function getExclusiveInd()
+    {
+        return $this->exclusiveInd;
+    }
+
+    /**
+     * Set purchase
+     *
+     * @param string $purchase
+     *
+     * @return ProductOffer
+     */
+    public function setPurchase($purchase)
+    {
+        $this->purchase = $purchase;
+
+        return $this;
+    }
+
+    /**
+     * Get purchase
+     *
+     * @return string
+     */
+    public function getPurchase()
+    {
+        return $this->purchase;
+    }
+
+    /**
+     * Set prodid
+     *
+     * @param integer $prodid
+     *
+     * @return ProductOffer
+     */
+    public function setProdid($prodid)
+    {
+        $this->prodid = $prodid;
+
+        return $this;
+    }
+
+    /**
+     * Get prodid
+     *
+     * @return integer
+     */
+    public function getProdid()
+    {
+        return $this->prodid;
+    }
+
+    /**
+     * Set providerType
+     *
+     * @param string $providerType
+     *
+     * @return ProductOffer
+     */
+    public function setProviderType($providerType)
+    {
+        $this->providerType = $providerType;
+
+        return $this;
+    }
+
+    /**
+     * Get providerType
+     *
+     * @return string
+     */
+    public function getProviderType()
+    {
+        return $this->providerType;
+    }
+
+    /**
+     * Get productOfferId
+     *
+     * @return integer
+     */
+    public function getProductOfferId()
+    {
+        return $this->productOfferId;
+    }
+}

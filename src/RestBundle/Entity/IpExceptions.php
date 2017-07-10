@@ -43,5 +43,86 @@ class IpExceptions
     private $id;
 
 
-}
 
+    /**
+     * Set libId
+     *
+     * @param integer $libId
+     *
+     * @return IpExceptions
+     */
+    public function setLibId($libId)
+    {
+        $this->libId = $libId;
+
+        return $this;
+    }
+
+    /**
+     * Get libId
+     *
+     * @return integer
+     */
+    public function getLibId()
+    {
+        return $this->libId;
+    }
+
+    /**
+     * Set ipAddrFrom
+     *
+     * @param string $ipAddrFrom
+     *
+     * @return IpExceptions
+     */
+    public function setIpAddrFrom($ipAddrFrom)
+    {
+        $this->ipAddrFrom = $ipAddrFrom;
+
+        return $this;
+    }
+
+    /**
+     * Get ipAddrFrom
+     *
+     * @return string
+     */
+    public function getIpAddrFrom()
+    {
+        return $this->ipAddrFrom;
+    }
+
+    /**
+     * Set ipAddrTo
+     *
+     * @param string $ipAddrTo
+     *
+     * @return IpExceptions
+     */
+    public function setIpAddrTo($ipAddrTo)
+    {
+        $this->ipAddrTo = $ipAddrTo;
+
+        return $this;
+    }
+
+    /**
+     * Get ipAddrTo
+     *
+     * @return string
+     */
+    public function getIpAddrTo()
+    {
+        return $this->ipAddrTo;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+}

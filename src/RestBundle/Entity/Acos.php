@@ -64,5 +64,158 @@ class Acos
     private $id;
 
 
-}
 
+    /**
+     * Set parentId
+     *
+     * @param integer $parentId
+     *
+     * @return Acos
+     */
+    public function setParentId($parentId)
+    {
+        $this->parentId = $parentId;
+
+        return $this;
+    }
+
+    /**
+     * Get parentId
+     *
+     * @return integer
+     */
+    public function getParentId()
+    {
+        return $this->parentId;
+    }
+
+    /**
+     * Set model
+     *
+     * @param string $model
+     *
+     * @return Acos
+     */
+    public function setModel($model)
+    {
+        $this->model = $model;
+
+        return $this;
+    }
+
+    /**
+     * Get model
+     *
+     * @return string
+     */
+    public function getModel()
+    {
+        return $this->model;
+    }
+
+    /**
+     * Set foreignKey
+     *
+     * @param integer $foreignKey
+     *
+     * @return Acos
+     */
+    public function setForeignKey($foreignKey)
+    {
+        $this->foreignKey = $foreignKey;
+
+        return $this;
+    }
+
+    /**
+     * Get foreignKey
+     *
+     * @return integer
+     */
+    public function getForeignKey()
+    {
+        return $this->foreignKey;
+    }
+
+    /**
+     * Set alias
+     *
+     * @param string $alias
+     *
+     * @return Acos
+     */
+    public function setAlias($alias)
+    {
+        $this->alias = $alias;
+
+        return $this;
+    }
+
+    /**
+     * Get alias
+     *
+     * @return string
+     */
+    public function getAlias()
+    {
+        return $this->alias;
+    }
+
+    /**
+     * Set lft
+     *
+     * @param integer $lft
+     *
+     * @return Acos
+     */
+    public function setLft($lft)
+    {
+        $this->lft = $lft;
+
+        return $this;
+    }
+
+    /**
+     * Get lft
+     *
+     * @return integer
+     */
+    public function getLft()
+    {
+        return $this->lft;
+    }
+
+    /**
+     * Set rght
+     *
+     * @param integer $rght
+     *
+     * @return Acos
+     */
+    public function setRght($rght)
+    {
+        $this->rght = $rght;
+
+        return $this;
+    }
+
+    /**
+     * Get rght
+     *
+     * @return integer
+     */
+    public function getRght()
+    {
+        return $this->rght;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+}

@@ -36,5 +36,62 @@ class Sessions
     private $id;
 
 
-}
 
+    /**
+     * Set data
+     *
+     * @param string $data
+     *
+     * @return Sessions
+     */
+    public function setData($data)
+    {
+        $this->data = $data;
+
+        return $this;
+    }
+
+    /**
+     * Get data
+     *
+     * @return string
+     */
+    public function getData()
+    {
+        return $this->data;
+    }
+
+    /**
+     * Set expires
+     *
+     * @param integer $expires
+     *
+     * @return Sessions
+     */
+    public function setExpires($expires)
+    {
+        $this->expires = $expires;
+
+        return $this;
+    }
+
+    /**
+     * Get expires
+     *
+     * @return integer
+     */
+    public function getExpires()
+    {
+        return $this->expires;
+    }
+
+    /**
+     * Get id
+     *
+     * @return string
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+}

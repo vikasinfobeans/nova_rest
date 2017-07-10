@@ -50,5 +50,110 @@ class Artists
     private $id;
 
 
-}
 
+    /**
+     * Set artistName
+     *
+     * @param string $artistName
+     *
+     * @return Artists
+     */
+    public function setArtistName($artistName)
+    {
+        $this->artistName = $artistName;
+
+        return $this;
+    }
+
+    /**
+     * Get artistName
+     *
+     * @return string
+     */
+    public function getArtistName()
+    {
+        return $this->artistName;
+    }
+
+    /**
+     * Set artistImage
+     *
+     * @param string $artistImage
+     *
+     * @return Artists
+     */
+    public function setArtistImage($artistImage)
+    {
+        $this->artistImage = $artistImage;
+
+        return $this;
+    }
+
+    /**
+     * Get artistImage
+     *
+     * @return string
+     */
+    public function getArtistImage()
+    {
+        return $this->artistImage;
+    }
+
+    /**
+     * Set territory
+     *
+     * @param string $territory
+     *
+     * @return Artists
+     */
+    public function setTerritory($territory)
+    {
+        $this->territory = $territory;
+
+        return $this;
+    }
+
+    /**
+     * Get territory
+     *
+     * @return string
+     */
+    public function getTerritory()
+    {
+        return $this->territory;
+    }
+
+    /**
+     * Set language
+     *
+     * @param string $language
+     *
+     * @return Artists
+     */
+    public function setLanguage($language)
+    {
+        $this->language = $language;
+
+        return $this;
+    }
+
+    /**
+     * Get language
+     *
+     * @return string
+     */
+    public function getLanguage()
+    {
+        return $this->language;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+}

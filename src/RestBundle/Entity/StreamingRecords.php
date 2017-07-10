@@ -64,5 +64,158 @@ class StreamingRecords
     private $id;
 
 
-}
 
+    /**
+     * Set patronId
+     *
+     * @param string $patronId
+     *
+     * @return StreamingRecords
+     */
+    public function setPatronId($patronId)
+    {
+        $this->patronId = $patronId;
+
+        return $this;
+    }
+
+    /**
+     * Get patronId
+     *
+     * @return string
+     */
+    public function getPatronId()
+    {
+        return $this->patronId;
+    }
+
+    /**
+     * Set libraryId
+     *
+     * @param integer $libraryId
+     *
+     * @return StreamingRecords
+     */
+    public function setLibraryId($libraryId)
+    {
+        $this->libraryId = $libraryId;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryId
+     *
+     * @return integer
+     */
+    public function getLibraryId()
+    {
+        return $this->libraryId;
+    }
+
+    /**
+     * Set consumedTime
+     *
+     * @param integer $consumedTime
+     *
+     * @return StreamingRecords
+     */
+    public function setConsumedTime($consumedTime)
+    {
+        $this->consumedTime = $consumedTime;
+
+        return $this;
+    }
+
+    /**
+     * Get consumedTime
+     *
+     * @return integer
+     */
+    public function getConsumedTime()
+    {
+        return $this->consumedTime;
+    }
+
+    /**
+     * Set createdon
+     *
+     * @param \DateTime $createdon
+     *
+     * @return StreamingRecords
+     */
+    public function setCreatedon($createdon)
+    {
+        $this->createdon = $createdon;
+
+        return $this;
+    }
+
+    /**
+     * Get createdon
+     *
+     * @return \DateTime
+     */
+    public function getCreatedon()
+    {
+        return $this->createdon;
+    }
+
+    /**
+     * Set updateon
+     *
+     * @param \DateTime $updateon
+     *
+     * @return StreamingRecords
+     */
+    public function setUpdateon($updateon)
+    {
+        $this->updateon = $updateon;
+
+        return $this;
+    }
+
+    /**
+     * Get updateon
+     *
+     * @return \DateTime
+     */
+    public function getUpdateon()
+    {
+        return $this->updateon;
+    }
+
+    /**
+     * Set modifiedDate
+     *
+     * @param \DateTime $modifiedDate
+     *
+     * @return StreamingRecords
+     */
+    public function setModifiedDate($modifiedDate)
+    {
+        $this->modifiedDate = $modifiedDate;
+
+        return $this;
+    }
+
+    /**
+     * Get modifiedDate
+     *
+     * @return \DateTime
+     */
+    public function getModifiedDate()
+    {
+        return $this->modifiedDate;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+}

@@ -71,5 +71,182 @@ class AstecLogins
     private $id;
 
 
-}
 
+    /**
+     * Set tid
+     *
+     * @param string $tid
+     *
+     * @return AstecLogins
+     */
+    public function setTid($tid)
+    {
+        $this->tid = $tid;
+
+        return $this;
+    }
+
+    /**
+     * Get tid
+     *
+     * @return string
+     */
+    public function getTid()
+    {
+        return $this->tid;
+    }
+
+    /**
+     * Set stateCode
+     *
+     * @param integer $stateCode
+     *
+     * @return AstecLogins
+     */
+    public function setStateCode($stateCode)
+    {
+        $this->stateCode = $stateCode;
+
+        return $this;
+    }
+
+    /**
+     * Get stateCode
+     *
+     * @return integer
+     */
+    public function getStateCode()
+    {
+        return $this->stateCode;
+    }
+
+    /**
+     * Set userState
+     *
+     * @param integer $userState
+     *
+     * @return AstecLogins
+     */
+    public function setUserState($userState)
+    {
+        $this->userState = $userState;
+
+        return $this;
+    }
+
+    /**
+     * Get userState
+     *
+     * @return integer
+     */
+    public function getUserState()
+    {
+        return $this->userState;
+    }
+
+    /**
+     * Set userHandle
+     *
+     * @param string $userHandle
+     *
+     * @return AstecLogins
+     */
+    public function setUserHandle($userHandle)
+    {
+        $this->userHandle = $userHandle;
+
+        return $this;
+    }
+
+    /**
+     * Get userHandle
+     *
+     * @return string
+     */
+    public function getUserHandle()
+    {
+        return $this->userHandle;
+    }
+
+    /**
+     * Set userAgeRestriction
+     *
+     * @param integer $userAgeRestriction
+     *
+     * @return AstecLogins
+     */
+    public function setUserAgeRestriction($userAgeRestriction)
+    {
+        $this->userAgeRestriction = $userAgeRestriction;
+
+        return $this;
+    }
+
+    /**
+     * Get userAgeRestriction
+     *
+     * @return integer
+     */
+    public function getUserAgeRestriction()
+    {
+        return $this->userAgeRestriction;
+    }
+
+    /**
+     * Set libraryId
+     *
+     * @param integer $libraryId
+     *
+     * @return AstecLogins
+     */
+    public function setLibraryId($libraryId)
+    {
+        $this->libraryId = $libraryId;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryId
+     *
+     * @return integer
+     */
+    public function getLibraryId()
+    {
+        return $this->libraryId;
+    }
+
+    /**
+     * Set created
+     *
+     * @param \DateTime $created
+     *
+     * @return AstecLogins
+     */
+    public function setCreated($created)
+    {
+        $this->created = $created;
+
+        return $this;
+    }
+
+    /**
+     * Get created
+     *
+     * @return \DateTime
+     */
+    public function getCreated()
+    {
+        return $this->created;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+}

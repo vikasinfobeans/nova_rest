@@ -64,5 +64,158 @@ class Questions
     private $id;
 
 
-}
 
+    /**
+     * Set sectionId
+     *
+     * @param integer $sectionId
+     *
+     * @return Questions
+     */
+    public function setSectionId($sectionId)
+    {
+        $this->sectionId = $sectionId;
+
+        return $this;
+    }
+
+    /**
+     * Get sectionId
+     *
+     * @return integer
+     */
+    public function getSectionId()
+    {
+        return $this->sectionId;
+    }
+
+    /**
+     * Set question
+     *
+     * @param string $question
+     *
+     * @return Questions
+     */
+    public function setQuestion($question)
+    {
+        $this->question = $question;
+
+        return $this;
+    }
+
+    /**
+     * Get question
+     *
+     * @return string
+     */
+    public function getQuestion()
+    {
+        return $this->question;
+    }
+
+    /**
+     * Set answer
+     *
+     * @param string $answer
+     *
+     * @return Questions
+     */
+    public function setAnswer($answer)
+    {
+        $this->answer = $answer;
+
+        return $this;
+    }
+
+    /**
+     * Get answer
+     *
+     * @return string
+     */
+    public function getAnswer()
+    {
+        return $this->answer;
+    }
+
+    /**
+     * Set sortId
+     *
+     * @param integer $sortId
+     *
+     * @return Questions
+     */
+    public function setSortId($sortId)
+    {
+        $this->sortId = $sortId;
+
+        return $this;
+    }
+
+    /**
+     * Get sortId
+     *
+     * @return integer
+     */
+    public function getSortId()
+    {
+        return $this->sortId;
+    }
+
+    /**
+     * Set created
+     *
+     * @param \DateTime $created
+     *
+     * @return Questions
+     */
+    public function setCreated($created)
+    {
+        $this->created = $created;
+
+        return $this;
+    }
+
+    /**
+     * Get created
+     *
+     * @return \DateTime
+     */
+    public function getCreated()
+    {
+        return $this->created;
+    }
+
+    /**
+     * Set modified
+     *
+     * @param \DateTime $modified
+     *
+     * @return Questions
+     */
+    public function setModified($modified)
+    {
+        $this->modified = $modified;
+
+        return $this;
+    }
+
+    /**
+     * Get modified
+     *
+     * @return \DateTime
+     */
+    public function getModified()
+    {
+        return $this->modified;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+}

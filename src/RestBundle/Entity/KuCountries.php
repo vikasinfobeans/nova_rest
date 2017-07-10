@@ -80,5 +80,220 @@ class KuCountries
     private $prodid;
 
 
-}
 
+    /**
+     * Set territory
+     *
+     * @param string $territory
+     *
+     * @return KuCountries
+     */
+    public function setTerritory($territory)
+    {
+        $this->territory = $territory;
+
+        return $this;
+    }
+
+    /**
+     * Get territory
+     *
+     * @return string
+     */
+    public function getTerritory()
+    {
+        return $this->territory;
+    }
+
+    /**
+     * Set salesdate
+     *
+     * @param \DateTime $salesdate
+     *
+     * @return KuCountries
+     */
+    public function setSalesdate($salesdate)
+    {
+        $this->salesdate = $salesdate;
+
+        return $this;
+    }
+
+    /**
+     * Get salesdate
+     *
+     * @return \DateTime
+     */
+    public function getSalesdate()
+    {
+        return $this->salesdate;
+    }
+
+    /**
+     * Set territoryid
+     *
+     * @param integer $territoryid
+     *
+     * @return KuCountries
+     */
+    public function setTerritoryid($territoryid)
+    {
+        $this->territoryid = $territoryid;
+
+        return $this;
+    }
+
+    /**
+     * Get territoryid
+     *
+     * @return integer
+     */
+    public function getTerritoryid()
+    {
+        return $this->territoryid;
+    }
+
+    /**
+     * Set downloadstatus
+     *
+     * @param boolean $downloadstatus
+     *
+     * @return KuCountries
+     */
+    public function setDownloadstatus($downloadstatus)
+    {
+        $this->downloadstatus = $downloadstatus;
+
+        return $this;
+    }
+
+    /**
+     * Get downloadstatus
+     *
+     * @return boolean
+     */
+    public function getDownloadstatus()
+    {
+        return $this->downloadstatus;
+    }
+
+    /**
+     * Set streamingstatus
+     *
+     * @param boolean $streamingstatus
+     *
+     * @return KuCountries
+     */
+    public function setStreamingstatus($streamingstatus)
+    {
+        $this->streamingstatus = $streamingstatus;
+
+        return $this;
+    }
+
+    /**
+     * Get streamingstatus
+     *
+     * @return boolean
+     */
+    public function getStreamingstatus()
+    {
+        return $this->streamingstatus;
+    }
+
+    /**
+     * Set streamingsalesdate
+     *
+     * @param \DateTime $streamingsalesdate
+     *
+     * @return KuCountries
+     */
+    public function setStreamingsalesdate($streamingsalesdate)
+    {
+        $this->streamingsalesdate = $streamingsalesdate;
+
+        return $this;
+    }
+
+    /**
+     * Get streamingsalesdate
+     *
+     * @return \DateTime
+     */
+    public function getStreamingsalesdate()
+    {
+        return $this->streamingsalesdate;
+    }
+
+    /**
+     * Set updateon
+     *
+     * @param \DateTime $updateon
+     *
+     * @return KuCountries
+     */
+    public function setUpdateon($updateon)
+    {
+        $this->updateon = $updateon;
+
+        return $this;
+    }
+
+    /**
+     * Get updateon
+     *
+     * @return \DateTime
+     */
+    public function getUpdateon()
+    {
+        return $this->updateon;
+    }
+
+    /**
+     * Set providerType
+     *
+     * @param string $providerType
+     *
+     * @return KuCountries
+     */
+    public function setProviderType($providerType)
+    {
+        $this->providerType = $providerType;
+
+        return $this;
+    }
+
+    /**
+     * Get providerType
+     *
+     * @return string
+     */
+    public function getProviderType()
+    {
+        return $this->providerType;
+    }
+
+    /**
+     * Set prodid
+     *
+     * @param integer $prodid
+     *
+     * @return KuCountries
+     */
+    public function setProdid($prodid)
+    {
+        $this->prodid = $prodid;
+
+        return $this;
+    }
+
+    /**
+     * Get prodid
+     *
+     * @return integer
+     */
+    public function getProdid()
+    {
+        return $this->prodid;
+    }
+}

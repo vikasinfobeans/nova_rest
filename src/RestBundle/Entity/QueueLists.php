@@ -92,5 +92,254 @@ class QueueLists
     private $queueId;
 
 
-}
 
+    /**
+     * Set libraryId
+     *
+     * @param integer $libraryId
+     *
+     * @return QueueLists
+     */
+    public function setLibraryId($libraryId)
+    {
+        $this->libraryId = $libraryId;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryId
+     *
+     * @return integer
+     */
+    public function getLibraryId()
+    {
+        return $this->libraryId;
+    }
+
+    /**
+     * Set queueName
+     *
+     * @param string $queueName
+     *
+     * @return QueueLists
+     */
+    public function setQueueName($queueName)
+    {
+        $this->queueName = $queueName;
+
+        return $this;
+    }
+
+    /**
+     * Get queueName
+     *
+     * @return string
+     */
+    public function getQueueName()
+    {
+        return $this->queueName;
+    }
+
+    /**
+     * Set allowedTerritories
+     *
+     * @param string $allowedTerritories
+     *
+     * @return QueueLists
+     */
+    public function setAllowedTerritories($allowedTerritories)
+    {
+        $this->allowedTerritories = $allowedTerritories;
+
+        return $this;
+    }
+
+    /**
+     * Get allowedTerritories
+     *
+     * @return string
+     */
+    public function getAllowedTerritories()
+    {
+        return $this->allowedTerritories;
+    }
+
+    /**
+     * Set created
+     *
+     * @param \DateTime $created
+     *
+     * @return QueueLists
+     */
+    public function setCreated($created)
+    {
+        $this->created = $created;
+
+        return $this;
+    }
+
+    /**
+     * Get created
+     *
+     * @return \DateTime
+     */
+    public function getCreated()
+    {
+        return $this->created;
+    }
+
+    /**
+     * Set modified
+     *
+     * @param \DateTime $modified
+     *
+     * @return QueueLists
+     */
+    public function setModified($modified)
+    {
+        $this->modified = $modified;
+
+        return $this;
+    }
+
+    /**
+     * Get modified
+     *
+     * @return \DateTime
+     */
+    public function getModified()
+    {
+        return $this->modified;
+    }
+
+    /**
+     * Set patronId
+     *
+     * @param string $patronId
+     *
+     * @return QueueLists
+     */
+    public function setPatronId($patronId)
+    {
+        $this->patronId = $patronId;
+
+        return $this;
+    }
+
+    /**
+     * Get patronId
+     *
+     * @return string
+     */
+    public function getPatronId()
+    {
+        return $this->patronId;
+    }
+
+    /**
+     * Set status
+     *
+     * @param boolean $status
+     *
+     * @return QueueLists
+     */
+    public function setStatus($status)
+    {
+        $this->status = $status;
+
+        return $this;
+    }
+
+    /**
+     * Get status
+     *
+     * @return boolean
+     */
+    public function getStatus()
+    {
+        return $this->status;
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     *
+     * @return QueueLists
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * Set queueType
+     *
+     * @param boolean $queueType
+     *
+     * @return QueueLists
+     */
+    public function setQueueType($queueType)
+    {
+        $this->queueType = $queueType;
+
+        return $this;
+    }
+
+    /**
+     * Get queueType
+     *
+     * @return boolean
+     */
+    public function getQueueType()
+    {
+        return $this->queueType;
+    }
+
+    /**
+     * Set sortid
+     *
+     * @param integer $sortid
+     *
+     * @return QueueLists
+     */
+    public function setSortid($sortid)
+    {
+        $this->sortid = $sortid;
+
+        return $this;
+    }
+
+    /**
+     * Get sortid
+     *
+     * @return integer
+     */
+    public function getSortid()
+    {
+        return $this->sortid;
+    }
+
+    /**
+     * Get queueId
+     *
+     * @return integer
+     */
+    public function getQueueId()
+    {
+        return $this->queueId;
+    }
+}

@@ -85,5 +85,230 @@ class LibraryPurchases
     private $id;
 
 
-}
 
+    /**
+     * Set libraryId
+     *
+     * @param integer $libraryId
+     *
+     * @return LibraryPurchases
+     */
+    public function setLibraryId($libraryId)
+    {
+        $this->libraryId = $libraryId;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryId
+     *
+     * @return integer
+     */
+    public function getLibraryId()
+    {
+        return $this->libraryId;
+    }
+
+    /**
+     * Set purchasedOrderNum
+     *
+     * @param string $purchasedOrderNum
+     *
+     * @return LibraryPurchases
+     */
+    public function setPurchasedOrderNum($purchasedOrderNum)
+    {
+        $this->purchasedOrderNum = $purchasedOrderNum;
+
+        return $this;
+    }
+
+    /**
+     * Get purchasedOrderNum
+     *
+     * @return string
+     */
+    public function getPurchasedOrderNum()
+    {
+        return $this->purchasedOrderNum;
+    }
+
+    /**
+     * Set purchasedTracks
+     *
+     * @param integer $purchasedTracks
+     *
+     * @return LibraryPurchases
+     */
+    public function setPurchasedTracks($purchasedTracks)
+    {
+        $this->purchasedTracks = $purchasedTracks;
+
+        return $this;
+    }
+
+    /**
+     * Get purchasedTracks
+     *
+     * @return integer
+     */
+    public function getPurchasedTracks()
+    {
+        return $this->purchasedTracks;
+    }
+
+    /**
+     * Set purchasedAmount
+     *
+     * @param float $purchasedAmount
+     *
+     * @return LibraryPurchases
+     */
+    public function setPurchasedAmount($purchasedAmount)
+    {
+        $this->purchasedAmount = $purchasedAmount;
+
+        return $this;
+    }
+
+    /**
+     * Get purchasedAmount
+     *
+     * @return float
+     */
+    public function getPurchasedAmount()
+    {
+        return $this->purchasedAmount;
+    }
+
+    /**
+     * Set created
+     *
+     * @param \DateTime $created
+     *
+     * @return LibraryPurchases
+     */
+    public function setCreated($created)
+    {
+        $this->created = $created;
+
+        return $this;
+    }
+
+    /**
+     * Get created
+     *
+     * @return \DateTime
+     */
+    public function getCreated()
+    {
+        return $this->created;
+    }
+
+    /**
+     * Set modified
+     *
+     * @param \DateTime $modified
+     *
+     * @return LibraryPurchases
+     */
+    public function setModified($modified)
+    {
+        $this->modified = $modified;
+
+        return $this;
+    }
+
+    /**
+     * Get modified
+     *
+     * @return \DateTime
+     */
+    public function getModified()
+    {
+        return $this->modified;
+    }
+
+    /**
+     * Set previouslyAvailableDownloads
+     *
+     * @param integer $previouslyAvailableDownloads
+     *
+     * @return LibraryPurchases
+     */
+    public function setPreviouslyAvailableDownloads($previouslyAvailableDownloads)
+    {
+        $this->previouslyAvailableDownloads = $previouslyAvailableDownloads;
+
+        return $this;
+    }
+
+    /**
+     * Get previouslyAvailableDownloads
+     *
+     * @return integer
+     */
+    public function getPreviouslyAvailableDownloads()
+    {
+        return $this->previouslyAvailableDownloads;
+    }
+
+    /**
+     * Set acv
+     *
+     * @param float $acv
+     *
+     * @return LibraryPurchases
+     */
+    public function setAcv($acv)
+    {
+        $this->acv = $acv;
+
+        return $this;
+    }
+
+    /**
+     * Get acv
+     *
+     * @return float
+     */
+    public function getAcv()
+    {
+        return $this->acv;
+    }
+
+    /**
+     * Set circulation
+     *
+     * @param string $circulation
+     *
+     * @return LibraryPurchases
+     */
+    public function setCirculation($circulation)
+    {
+        $this->circulation = $circulation;
+
+        return $this;
+    }
+
+    /**
+     * Get circulation
+     *
+     * @return string
+     */
+    public function getCirculation()
+    {
+        return $this->circulation;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+}

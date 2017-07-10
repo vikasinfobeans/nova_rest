@@ -29,5 +29,38 @@ class Territories
     private $territoryid;
 
 
-}
 
+    /**
+     * Set territory
+     *
+     * @param string $territory
+     *
+     * @return Territories
+     */
+    public function setTerritory($territory)
+    {
+        $this->territory = $territory;
+
+        return $this;
+    }
+
+    /**
+     * Get territory
+     *
+     * @return string
+     */
+    public function getTerritory()
+    {
+        return $this->territory;
+    }
+
+    /**
+     * Get territoryid
+     *
+     * @return integer
+     */
+    public function getTerritoryid()
+    {
+        return $this->territoryid;
+    }
+}

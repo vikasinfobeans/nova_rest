@@ -67,5 +67,158 @@ class QueueDetails
     private $queue;
 
 
-}
 
+    /**
+     * Set songProdid
+     *
+     * @param integer $songProdid
+     *
+     * @return QueueDetails
+     */
+    public function setSongProdid($songProdid)
+    {
+        $this->songProdid = $songProdid;
+
+        return $this;
+    }
+
+    /**
+     * Get songProdid
+     *
+     * @return integer
+     */
+    public function getSongProdid()
+    {
+        return $this->songProdid;
+    }
+
+    /**
+     * Set songProvidertype
+     *
+     * @param string $songProvidertype
+     *
+     * @return QueueDetails
+     */
+    public function setSongProvidertype($songProvidertype)
+    {
+        $this->songProvidertype = $songProvidertype;
+
+        return $this;
+    }
+
+    /**
+     * Get songProvidertype
+     *
+     * @return string
+     */
+    public function getSongProvidertype()
+    {
+        return $this->songProvidertype;
+    }
+
+    /**
+     * Set albumProdid
+     *
+     * @param integer $albumProdid
+     *
+     * @return QueueDetails
+     */
+    public function setAlbumProdid($albumProdid)
+    {
+        $this->albumProdid = $albumProdid;
+
+        return $this;
+    }
+
+    /**
+     * Get albumProdid
+     *
+     * @return integer
+     */
+    public function getAlbumProdid()
+    {
+        return $this->albumProdid;
+    }
+
+    /**
+     * Set albumProvidertype
+     *
+     * @param string $albumProvidertype
+     *
+     * @return QueueDetails
+     */
+    public function setAlbumProvidertype($albumProvidertype)
+    {
+        $this->albumProvidertype = $albumProvidertype;
+
+        return $this;
+    }
+
+    /**
+     * Get albumProvidertype
+     *
+     * @return string
+     */
+    public function getAlbumProvidertype()
+    {
+        return $this->albumProvidertype;
+    }
+
+    /**
+     * Set sortid
+     *
+     * @param integer $sortid
+     *
+     * @return QueueDetails
+     */
+    public function setSortid($sortid)
+    {
+        $this->sortid = $sortid;
+
+        return $this;
+    }
+
+    /**
+     * Get sortid
+     *
+     * @return integer
+     */
+    public function getSortid()
+    {
+        return $this->sortid;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set queue
+     *
+     * @param \RestBundle\Entity\QueueLists $queue
+     *
+     * @return QueueDetails
+     */
+    public function setQueue(\RestBundle\Entity\QueueLists $queue = null)
+    {
+        $this->queue = $queue;
+
+        return $this;
+    }
+
+    /**
+     * Get queue
+     *
+     * @return \RestBundle\Entity\QueueLists
+     */
+    public function getQueue()
+    {
+        return $this->queue;
+    }
+}

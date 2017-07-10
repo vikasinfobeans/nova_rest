@@ -61,5 +61,148 @@ class Genre
     private $genre;
 
 
-}
 
+    /**
+     * Set expectedGenre
+     *
+     * @param string $expectedGenre
+     *
+     * @return Genre
+     */
+    public function setExpectedGenre($expectedGenre)
+    {
+        $this->expectedGenre = $expectedGenre;
+
+        return $this;
+    }
+
+    /**
+     * Get expectedGenre
+     *
+     * @return string
+     */
+    public function getExpectedGenre()
+    {
+        return $this->expectedGenre;
+    }
+
+    /**
+     * Set subgenre
+     *
+     * @param string $subgenre
+     *
+     * @return Genre
+     */
+    public function setSubgenre($subgenre)
+    {
+        $this->subgenre = $subgenre;
+
+        return $this;
+    }
+
+    /**
+     * Get subgenre
+     *
+     * @return string
+     */
+    public function getSubgenre()
+    {
+        return $this->subgenre;
+    }
+
+    /**
+     * Set genreid
+     *
+     * @param integer $genreid
+     *
+     * @return Genre
+     */
+    public function setGenreid($genreid)
+    {
+        $this->genreid = $genreid;
+
+        return $this;
+    }
+
+    /**
+     * Get genreid
+     *
+     * @return integer
+     */
+    public function getGenreid()
+    {
+        return $this->genreid;
+    }
+
+    /**
+     * Set providerType
+     *
+     * @param string $providerType
+     *
+     * @return Genre
+     */
+    public function setProviderType($providerType)
+    {
+        $this->providerType = $providerType;
+
+        return $this;
+    }
+
+    /**
+     * Get providerType
+     *
+     * @return string
+     */
+    public function getProviderType()
+    {
+        return $this->providerType;
+    }
+
+    /**
+     * Set prodid
+     *
+     * @param integer $prodid
+     *
+     * @return Genre
+     */
+    public function setProdid($prodid)
+    {
+        $this->prodid = $prodid;
+
+        return $this;
+    }
+
+    /**
+     * Get prodid
+     *
+     * @return integer
+     */
+    public function getProdid()
+    {
+        return $this->prodid;
+    }
+
+    /**
+     * Set genre
+     *
+     * @param string $genre
+     *
+     * @return Genre
+     */
+    public function setGenre($genre)
+    {
+        $this->genre = $genre;
+
+        return $this;
+    }
+
+    /**
+     * Get genre
+     *
+     * @return string
+     */
+    public function getGenre()
+    {
+        return $this->genre;
+    }
+}

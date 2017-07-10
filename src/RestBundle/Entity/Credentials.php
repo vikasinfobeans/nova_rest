@@ -43,5 +43,86 @@ class Credentials
     private $id;
 
 
-}
 
+    /**
+     * Set card
+     *
+     * @param string $card
+     *
+     * @return Credentials
+     */
+    public function setCard($card)
+    {
+        $this->card = $card;
+
+        return $this;
+    }
+
+    /**
+     * Get card
+     *
+     * @return string
+     */
+    public function getCard()
+    {
+        return $this->card;
+    }
+
+    /**
+     * Set pin
+     *
+     * @param string $pin
+     *
+     * @return Credentials
+     */
+    public function setPin($pin)
+    {
+        $this->pin = $pin;
+
+        return $this;
+    }
+
+    /**
+     * Get pin
+     *
+     * @return string
+     */
+    public function getPin()
+    {
+        return $this->pin;
+    }
+
+    /**
+     * Set libraryId
+     *
+     * @param integer $libraryId
+     *
+     * @return Credentials
+     */
+    public function setLibraryId($libraryId)
+    {
+        $this->libraryId = $libraryId;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryId
+     *
+     * @return integer
+     */
+    public function getLibraryId()
+    {
+        return $this->libraryId;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+}

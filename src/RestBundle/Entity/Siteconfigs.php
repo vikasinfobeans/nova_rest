@@ -36,5 +36,62 @@ class Siteconfigs
     private $id;
 
 
-}
 
+    /**
+     * Set soption
+     *
+     * @param string $soption
+     *
+     * @return Siteconfigs
+     */
+    public function setSoption($soption)
+    {
+        $this->soption = $soption;
+
+        return $this;
+    }
+
+    /**
+     * Get soption
+     *
+     * @return string
+     */
+    public function getSoption()
+    {
+        return $this->soption;
+    }
+
+    /**
+     * Set svalue
+     *
+     * @param string $svalue
+     *
+     * @return Siteconfigs
+     */
+    public function setSvalue($svalue)
+    {
+        $this->svalue = $svalue;
+
+        return $this;
+    }
+
+    /**
+     * Get svalue
+     *
+     * @return string
+     */
+    public function getSvalue()
+    {
+        return $this->svalue;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+}
