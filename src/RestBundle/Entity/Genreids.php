@@ -29,5 +29,38 @@ class Genreids
     private $genreid;
 
 
-}
 
+    /**
+     * Set genre
+     *
+     * @param string $genre
+     *
+     * @return Genreids
+     */
+    public function setGenre($genre)
+    {
+        $this->genre = $genre;
+
+        return $this;
+    }
+
+    /**
+     * Get genre
+     *
+     * @return string
+     */
+    public function getGenre()
+    {
+        return $this->genre;
+    }
+
+    /**
+     * Get genreid
+     *
+     * @return integer
+     */
+    public function getGenreid()
+    {
+        return $this->genreid;
+    }
+}

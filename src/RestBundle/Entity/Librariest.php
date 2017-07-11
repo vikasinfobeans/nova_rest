@@ -694,5 +694,2318 @@ class Librariest
     private $id;
 
 
-}
 
+    /**
+     * Set customerId
+     *
+     * @param integer $customerId
+     *
+     * @return Librariest
+     */
+    public function setCustomerId($customerId)
+    {
+        $this->customerId = $customerId;
+
+        return $this;
+    }
+
+    /**
+     * Get customerId
+     *
+     * @return integer
+     */
+    public function getCustomerId()
+    {
+        return $this->customerId;
+    }
+
+    /**
+     * Set libraryName
+     *
+     * @param string $libraryName
+     *
+     * @return Librariest
+     */
+    public function setLibraryName($libraryName)
+    {
+        $this->libraryName = $libraryName;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryName
+     *
+     * @return string
+     */
+    public function getLibraryName()
+    {
+        return $this->libraryName;
+    }
+
+    /**
+     * Set libraryDomainName
+     *
+     * @param string $libraryDomainName
+     *
+     * @return Librariest
+     */
+    public function setLibraryDomainName($libraryDomainName)
+    {
+        $this->libraryDomainName = $libraryDomainName;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryDomainName
+     *
+     * @return string
+     */
+    public function getLibraryDomainName()
+    {
+        return $this->libraryDomainName;
+    }
+
+    /**
+     * Set libraryHomeUrl
+     *
+     * @param string $libraryHomeUrl
+     *
+     * @return Librariest
+     */
+    public function setLibraryHomeUrl($libraryHomeUrl)
+    {
+        $this->libraryHomeUrl = $libraryHomeUrl;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryHomeUrl
+     *
+     * @return string
+     */
+    public function getLibraryHomeUrl()
+    {
+        return $this->libraryHomeUrl;
+    }
+
+    /**
+     * Set libraryAuthenticationMethod
+     *
+     * @param string $libraryAuthenticationMethod
+     *
+     * @return Librariest
+     */
+    public function setLibraryAuthenticationMethod($libraryAuthenticationMethod)
+    {
+        $this->libraryAuthenticationMethod = $libraryAuthenticationMethod;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryAuthenticationMethod
+     *
+     * @return string
+     */
+    public function getLibraryAuthenticationMethod()
+    {
+        return $this->libraryAuthenticationMethod;
+    }
+
+    /**
+     * Set mobileAuth
+     *
+     * @param string $mobileAuth
+     *
+     * @return Librariest
+     */
+    public function setMobileAuth($mobileAuth)
+    {
+        $this->mobileAuth = $mobileAuth;
+
+        return $this;
+    }
+
+    /**
+     * Get mobileAuth
+     *
+     * @return string
+     */
+    public function getMobileAuth()
+    {
+        return $this->mobileAuth;
+    }
+
+    /**
+     * Set libraryAuthenticationNum
+     *
+     * @param string $libraryAuthenticationNum
+     *
+     * @return Librariest
+     */
+    public function setLibraryAuthenticationNum($libraryAuthenticationNum)
+    {
+        $this->libraryAuthenticationNum = $libraryAuthenticationNum;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryAuthenticationNum
+     *
+     * @return string
+     */
+    public function getLibraryAuthenticationNum()
+    {
+        return $this->libraryAuthenticationNum;
+    }
+
+    /**
+     * Set libraryAuthenticationUrl
+     *
+     * @param string $libraryAuthenticationUrl
+     *
+     * @return Librariest
+     */
+    public function setLibraryAuthenticationUrl($libraryAuthenticationUrl)
+    {
+        $this->libraryAuthenticationUrl = $libraryAuthenticationUrl;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryAuthenticationUrl
+     *
+     * @return string
+     */
+    public function getLibraryAuthenticationUrl()
+    {
+        return $this->libraryAuthenticationUrl;
+    }
+
+    /**
+     * Set librarySpaceCheck
+     *
+     * @param string $librarySpaceCheck
+     *
+     * @return Librariest
+     */
+    public function setLibrarySpaceCheck($librarySpaceCheck)
+    {
+        $this->librarySpaceCheck = $librarySpaceCheck;
+
+        return $this;
+    }
+
+    /**
+     * Get librarySpaceCheck
+     *
+     * @return string
+     */
+    public function getLibrarySpaceCheck()
+    {
+        return $this->librarySpaceCheck;
+    }
+
+    /**
+     * Set libraryLogoutUrl
+     *
+     * @param string $libraryLogoutUrl
+     *
+     * @return Librariest
+     */
+    public function setLibraryLogoutUrl($libraryLogoutUrl)
+    {
+        $this->libraryLogoutUrl = $libraryLogoutUrl;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryLogoutUrl
+     *
+     * @return string
+     */
+    public function getLibraryLogoutUrl()
+    {
+        return $this->libraryLogoutUrl;
+    }
+
+    /**
+     * Set libraryApikey
+     *
+     * @param string $libraryApikey
+     *
+     * @return Librariest
+     */
+    public function setLibraryApikey($libraryApikey)
+    {
+        $this->libraryApikey = $libraryApikey;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryApikey
+     *
+     * @return string
+     */
+    public function getLibraryApikey()
+    {
+        return $this->libraryApikey;
+    }
+
+    /**
+     * Set librarySubdomain
+     *
+     * @param string $librarySubdomain
+     *
+     * @return Librariest
+     */
+    public function setLibrarySubdomain($librarySubdomain)
+    {
+        $this->librarySubdomain = $librarySubdomain;
+
+        return $this;
+    }
+
+    /**
+     * Get librarySubdomain
+     *
+     * @return string
+     */
+    public function getLibrarySubdomain()
+    {
+        return $this->librarySubdomain;
+    }
+
+    /**
+     * Set librarySoapUrl
+     *
+     * @param string $librarySoapUrl
+     *
+     * @return Librariest
+     */
+    public function setLibrarySoapUrl($librarySoapUrl)
+    {
+        $this->librarySoapUrl = $librarySoapUrl;
+
+        return $this;
+    }
+
+    /**
+     * Get librarySoapUrl
+     *
+     * @return string
+     */
+    public function getLibrarySoapUrl()
+    {
+        return $this->librarySoapUrl;
+    }
+
+    /**
+     * Set libraryCurlUrl
+     *
+     * @param string $libraryCurlUrl
+     *
+     * @return Librariest
+     */
+    public function setLibraryCurlUrl($libraryCurlUrl)
+    {
+        $this->libraryCurlUrl = $libraryCurlUrl;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryCurlUrl
+     *
+     * @return string
+     */
+    public function getLibraryCurlUrl()
+    {
+        return $this->libraryCurlUrl;
+    }
+
+    /**
+     * Set libraryCurlDb
+     *
+     * @param string $libraryCurlDb
+     *
+     * @return Librariest
+     */
+    public function setLibraryCurlDb($libraryCurlDb)
+    {
+        $this->libraryCurlDb = $libraryCurlDb;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryCurlDb
+     *
+     * @return string
+     */
+    public function getLibraryCurlDb()
+    {
+        return $this->libraryCurlDb;
+    }
+
+    /**
+     * Set libraryAuthenticationVariable
+     *
+     * @param string $libraryAuthenticationVariable
+     *
+     * @return Librariest
+     */
+    public function setLibraryAuthenticationVariable($libraryAuthenticationVariable)
+    {
+        $this->libraryAuthenticationVariable = $libraryAuthenticationVariable;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryAuthenticationVariable
+     *
+     * @return string
+     */
+    public function getLibraryAuthenticationVariable()
+    {
+        return $this->libraryAuthenticationVariable;
+    }
+
+    /**
+     * Set libraryAuthenticationResponse
+     *
+     * @param string $libraryAuthenticationResponse
+     *
+     * @return Librariest
+     */
+    public function setLibraryAuthenticationResponse($libraryAuthenticationResponse)
+    {
+        $this->libraryAuthenticationResponse = $libraryAuthenticationResponse;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryAuthenticationResponse
+     *
+     * @return string
+     */
+    public function getLibraryAuthenticationResponse()
+    {
+        return $this->libraryAuthenticationResponse;
+    }
+
+    /**
+     * Set libraryPortNo
+     *
+     * @param integer $libraryPortNo
+     *
+     * @return Librariest
+     */
+    public function setLibraryPortNo($libraryPortNo)
+    {
+        $this->libraryPortNo = $libraryPortNo;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryPortNo
+     *
+     * @return integer
+     */
+    public function getLibraryPortNo()
+    {
+        return $this->libraryPortNo;
+    }
+
+    /**
+     * Set libraryHostName
+     *
+     * @param string $libraryHostName
+     *
+     * @return Librariest
+     */
+    public function setLibraryHostName($libraryHostName)
+    {
+        $this->libraryHostName = $libraryHostName;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryHostName
+     *
+     * @return string
+     */
+    public function getLibraryHostName()
+    {
+        return $this->libraryHostName;
+    }
+
+    /**
+     * Set librarySipLogin
+     *
+     * @param string $librarySipLogin
+     *
+     * @return Librariest
+     */
+    public function setLibrarySipLogin($librarySipLogin)
+    {
+        $this->librarySipLogin = $librarySipLogin;
+
+        return $this;
+    }
+
+    /**
+     * Get librarySipLogin
+     *
+     * @return string
+     */
+    public function getLibrarySipLogin()
+    {
+        return $this->librarySipLogin;
+    }
+
+    /**
+     * Set librarySipPassword
+     *
+     * @param string $librarySipPassword
+     *
+     * @return Librariest
+     */
+    public function setLibrarySipPassword($librarySipPassword)
+    {
+        $this->librarySipPassword = $librarySipPassword;
+
+        return $this;
+    }
+
+    /**
+     * Get librarySipPassword
+     *
+     * @return string
+     */
+    public function getLibrarySipPassword()
+    {
+        return $this->librarySipPassword;
+    }
+
+    /**
+     * Set librarySipLocation
+     *
+     * @param string $librarySipLocation
+     *
+     * @return Librariest
+     */
+    public function setLibrarySipLocation($librarySipLocation)
+    {
+        $this->librarySipLocation = $librarySipLocation;
+
+        return $this;
+    }
+
+    /**
+     * Get librarySipLocation
+     *
+     * @return string
+     */
+    public function getLibrarySipLocation()
+    {
+        return $this->librarySipLocation;
+    }
+
+    /**
+     * Set librarySipTerminalPassword
+     *
+     * @param string $librarySipTerminalPassword
+     *
+     * @return Librariest
+     */
+    public function setLibrarySipTerminalPassword($librarySipTerminalPassword)
+    {
+        $this->librarySipTerminalPassword = $librarySipTerminalPassword;
+
+        return $this;
+    }
+
+    /**
+     * Get librarySipTerminalPassword
+     *
+     * @return string
+     */
+    public function getLibrarySipTerminalPassword()
+    {
+        return $this->librarySipTerminalPassword;
+    }
+
+    /**
+     * Set librarySipVersion
+     *
+     * @param string $librarySipVersion
+     *
+     * @return Librariest
+     */
+    public function setLibrarySipVersion($librarySipVersion)
+    {
+        $this->librarySipVersion = $librarySipVersion;
+
+        return $this;
+    }
+
+    /**
+     * Get librarySipVersion
+     *
+     * @return string
+     */
+    public function getLibrarySipVersion()
+    {
+        return $this->librarySipVersion;
+    }
+
+    /**
+     * Set librarySipInstitution
+     *
+     * @param string $librarySipInstitution
+     *
+     * @return Librariest
+     */
+    public function setLibrarySipInstitution($librarySipInstitution)
+    {
+        $this->librarySipInstitution = $librarySipInstitution;
+
+        return $this;
+    }
+
+    /**
+     * Get librarySipInstitution
+     *
+     * @return string
+     */
+    public function getLibrarySipInstitution()
+    {
+        return $this->librarySipInstitution;
+    }
+
+    /**
+     * Set librarySip24Check
+     *
+     * @param string $librarySip24Check
+     *
+     * @return Librariest
+     */
+    public function setLibrarySip24Check($librarySip24Check)
+    {
+        $this->librarySip24Check = $librarySip24Check;
+
+        return $this;
+    }
+
+    /**
+     * Get librarySip24Check
+     *
+     * @return string
+     */
+    public function getLibrarySip24Check()
+    {
+        return $this->librarySip24Check;
+    }
+
+    /**
+     * Set librarySipError
+     *
+     * @param string $librarySipError
+     *
+     * @return Librariest
+     */
+    public function setLibrarySipError($librarySipError)
+    {
+        $this->librarySipError = $librarySipError;
+
+        return $this;
+    }
+
+    /**
+     * Get librarySipError
+     *
+     * @return string
+     */
+    public function getLibrarySipError()
+    {
+        return $this->librarySipError;
+    }
+
+    /**
+     * Set librarySip64CheckOff
+     *
+     * @param integer $librarySip64CheckOff
+     *
+     * @return Librariest
+     */
+    public function setLibrarySip64CheckOff($librarySip64CheckOff)
+    {
+        $this->librarySip64CheckOff = $librarySip64CheckOff;
+
+        return $this;
+    }
+
+    /**
+     * Get librarySip64CheckOff
+     *
+     * @return integer
+     */
+    public function getLibrarySip64CheckOff()
+    {
+        return $this->librarySip64CheckOff;
+    }
+
+    /**
+     * Set libraryEzproxySecret
+     *
+     * @param string $libraryEzproxySecret
+     *
+     * @return Librariest
+     */
+    public function setLibraryEzproxySecret($libraryEzproxySecret)
+    {
+        $this->libraryEzproxySecret = $libraryEzproxySecret;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryEzproxySecret
+     *
+     * @return string
+     */
+    public function getLibraryEzproxySecret()
+    {
+        return $this->libraryEzproxySecret;
+    }
+
+    /**
+     * Set libraryEzproxyReferral
+     *
+     * @param string $libraryEzproxyReferral
+     *
+     * @return Librariest
+     */
+    public function setLibraryEzproxyReferral($libraryEzproxyReferral)
+    {
+        $this->libraryEzproxyReferral = $libraryEzproxyReferral;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryEzproxyReferral
+     *
+     * @return string
+     */
+    public function getLibraryEzproxyReferral()
+    {
+        return $this->libraryEzproxyReferral;
+    }
+
+    /**
+     * Set libraryEzproxyName
+     *
+     * @param string $libraryEzproxyName
+     *
+     * @return Librariest
+     */
+    public function setLibraryEzproxyName($libraryEzproxyName)
+    {
+        $this->libraryEzproxyName = $libraryEzproxyName;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryEzproxyName
+     *
+     * @return string
+     */
+    public function getLibraryEzproxyName()
+    {
+        return $this->libraryEzproxyName;
+    }
+
+    /**
+     * Set libraryEzproxyDomain
+     *
+     * @param string $libraryEzproxyDomain
+     *
+     * @return Librariest
+     */
+    public function setLibraryEzproxyDomain($libraryEzproxyDomain)
+    {
+        $this->libraryEzproxyDomain = $libraryEzproxyDomain;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryEzproxyDomain
+     *
+     * @return string
+     */
+    public function getLibraryEzproxyDomain()
+    {
+        return $this->libraryEzproxyDomain;
+    }
+
+    /**
+     * Set libraryEzproxyWskey
+     *
+     * @param string $libraryEzproxyWskey
+     *
+     * @return Librariest
+     */
+    public function setLibraryEzproxyWskey($libraryEzproxyWskey)
+    {
+        $this->libraryEzproxyWskey = $libraryEzproxyWskey;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryEzproxyWskey
+     *
+     * @return string
+     */
+    public function getLibraryEzproxyWskey()
+    {
+        return $this->libraryEzproxyWskey;
+    }
+
+    /**
+     * Set libraryEzproxyLogout
+     *
+     * @param string $libraryEzproxyLogout
+     *
+     * @return Librariest
+     */
+    public function setLibraryEzproxyLogout($libraryEzproxyLogout)
+    {
+        $this->libraryEzproxyLogout = $libraryEzproxyLogout;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryEzproxyLogout
+     *
+     * @return string
+     */
+    public function getLibraryEzproxyLogout()
+    {
+        return $this->libraryEzproxyLogout;
+    }
+
+    /**
+     * Set libraryBgcolor
+     *
+     * @param string $libraryBgcolor
+     *
+     * @return Librariest
+     */
+    public function setLibraryBgcolor($libraryBgcolor)
+    {
+        $this->libraryBgcolor = $libraryBgcolor;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryBgcolor
+     *
+     * @return string
+     */
+    public function getLibraryBgcolor()
+    {
+        return $this->libraryBgcolor;
+    }
+
+    /**
+     * Set libraryContentBgcolor
+     *
+     * @param string $libraryContentBgcolor
+     *
+     * @return Librariest
+     */
+    public function setLibraryContentBgcolor($libraryContentBgcolor)
+    {
+        $this->libraryContentBgcolor = $libraryContentBgcolor;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryContentBgcolor
+     *
+     * @return string
+     */
+    public function getLibraryContentBgcolor()
+    {
+        return $this->libraryContentBgcolor;
+    }
+
+    /**
+     * Set libraryNavBgcolor
+     *
+     * @param string $libraryNavBgcolor
+     *
+     * @return Librariest
+     */
+    public function setLibraryNavBgcolor($libraryNavBgcolor)
+    {
+        $this->libraryNavBgcolor = $libraryNavBgcolor;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryNavBgcolor
+     *
+     * @return string
+     */
+    public function getLibraryNavBgcolor()
+    {
+        return $this->libraryNavBgcolor;
+    }
+
+    /**
+     * Set libraryBoxheaderBgcolor
+     *
+     * @param string $libraryBoxheaderBgcolor
+     *
+     * @return Librariest
+     */
+    public function setLibraryBoxheaderBgcolor($libraryBoxheaderBgcolor)
+    {
+        $this->libraryBoxheaderBgcolor = $libraryBoxheaderBgcolor;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryBoxheaderBgcolor
+     *
+     * @return string
+     */
+    public function getLibraryBoxheaderBgcolor()
+    {
+        return $this->libraryBoxheaderBgcolor;
+    }
+
+    /**
+     * Set libraryBoxheaderTextColor
+     *
+     * @param string $libraryBoxheaderTextColor
+     *
+     * @return Librariest
+     */
+    public function setLibraryBoxheaderTextColor($libraryBoxheaderTextColor)
+    {
+        $this->libraryBoxheaderTextColor = $libraryBoxheaderTextColor;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryBoxheaderTextColor
+     *
+     * @return string
+     */
+    public function getLibraryBoxheaderTextColor()
+    {
+        return $this->libraryBoxheaderTextColor;
+    }
+
+    /**
+     * Set libraryTextColor
+     *
+     * @param string $libraryTextColor
+     *
+     * @return Librariest
+     */
+    public function setLibraryTextColor($libraryTextColor)
+    {
+        $this->libraryTextColor = $libraryTextColor;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryTextColor
+     *
+     * @return string
+     */
+    public function getLibraryTextColor()
+    {
+        return $this->libraryTextColor;
+    }
+
+    /**
+     * Set libraryLinksColor
+     *
+     * @param string $libraryLinksColor
+     *
+     * @return Librariest
+     */
+    public function setLibraryLinksColor($libraryLinksColor)
+    {
+        $this->libraryLinksColor = $libraryLinksColor;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryLinksColor
+     *
+     * @return string
+     */
+    public function getLibraryLinksColor()
+    {
+        return $this->libraryLinksColor;
+    }
+
+    /**
+     * Set libraryLinksHoverColor
+     *
+     * @param string $libraryLinksHoverColor
+     *
+     * @return Librariest
+     */
+    public function setLibraryLinksHoverColor($libraryLinksHoverColor)
+    {
+        $this->libraryLinksHoverColor = $libraryLinksHoverColor;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryLinksHoverColor
+     *
+     * @return string
+     */
+    public function getLibraryLinksHoverColor()
+    {
+        return $this->libraryLinksHoverColor;
+    }
+
+    /**
+     * Set libraryNavlinksColor
+     *
+     * @param string $libraryNavlinksColor
+     *
+     * @return Librariest
+     */
+    public function setLibraryNavlinksColor($libraryNavlinksColor)
+    {
+        $this->libraryNavlinksColor = $libraryNavlinksColor;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryNavlinksColor
+     *
+     * @return string
+     */
+    public function getLibraryNavlinksColor()
+    {
+        return $this->libraryNavlinksColor;
+    }
+
+    /**
+     * Set libraryNavlinksHoverColor
+     *
+     * @param string $libraryNavlinksHoverColor
+     *
+     * @return Librariest
+     */
+    public function setLibraryNavlinksHoverColor($libraryNavlinksHoverColor)
+    {
+        $this->libraryNavlinksHoverColor = $libraryNavlinksHoverColor;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryNavlinksHoverColor
+     *
+     * @return string
+     */
+    public function getLibraryNavlinksHoverColor()
+    {
+        return $this->libraryNavlinksHoverColor;
+    }
+
+    /**
+     * Set libraryBoxHeaderColor
+     *
+     * @param string $libraryBoxHeaderColor
+     *
+     * @return Librariest
+     */
+    public function setLibraryBoxHeaderColor($libraryBoxHeaderColor)
+    {
+        $this->libraryBoxHeaderColor = $libraryBoxHeaderColor;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryBoxHeaderColor
+     *
+     * @return string
+     */
+    public function getLibraryBoxHeaderColor()
+    {
+        return $this->libraryBoxHeaderColor;
+    }
+
+    /**
+     * Set libraryBoxHoverColor
+     *
+     * @param string $libraryBoxHoverColor
+     *
+     * @return Librariest
+     */
+    public function setLibraryBoxHoverColor($libraryBoxHoverColor)
+    {
+        $this->libraryBoxHoverColor = $libraryBoxHoverColor;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryBoxHoverColor
+     *
+     * @return string
+     */
+    public function getLibraryBoxHoverColor()
+    {
+        return $this->libraryBoxHoverColor;
+    }
+
+    /**
+     * Set libraryContactFname
+     *
+     * @param string $libraryContactFname
+     *
+     * @return Librariest
+     */
+    public function setLibraryContactFname($libraryContactFname)
+    {
+        $this->libraryContactFname = $libraryContactFname;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryContactFname
+     *
+     * @return string
+     */
+    public function getLibraryContactFname()
+    {
+        return $this->libraryContactFname;
+    }
+
+    /**
+     * Set libraryContactLname
+     *
+     * @param string $libraryContactLname
+     *
+     * @return Librariest
+     */
+    public function setLibraryContactLname($libraryContactLname)
+    {
+        $this->libraryContactLname = $libraryContactLname;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryContactLname
+     *
+     * @return string
+     */
+    public function getLibraryContactLname()
+    {
+        return $this->libraryContactLname;
+    }
+
+    /**
+     * Set libraryContactEmail
+     *
+     * @param string $libraryContactEmail
+     *
+     * @return Librariest
+     */
+    public function setLibraryContactEmail($libraryContactEmail)
+    {
+        $this->libraryContactEmail = $libraryContactEmail;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryContactEmail
+     *
+     * @return string
+     */
+    public function getLibraryContactEmail()
+    {
+        return $this->libraryContactEmail;
+    }
+
+    /**
+     * Set libraryPhone
+     *
+     * @param string $libraryPhone
+     *
+     * @return Librariest
+     */
+    public function setLibraryPhone($libraryPhone)
+    {
+        $this->libraryPhone = $libraryPhone;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryPhone
+     *
+     * @return string
+     */
+    public function getLibraryPhone()
+    {
+        return $this->libraryPhone;
+    }
+
+    /**
+     * Set libraryAddress
+     *
+     * @param string $libraryAddress
+     *
+     * @return Librariest
+     */
+    public function setLibraryAddress($libraryAddress)
+    {
+        $this->libraryAddress = $libraryAddress;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryAddress
+     *
+     * @return string
+     */
+    public function getLibraryAddress()
+    {
+        return $this->libraryAddress;
+    }
+
+    /**
+     * Set libraryAddress2
+     *
+     * @param string $libraryAddress2
+     *
+     * @return Librariest
+     */
+    public function setLibraryAddress2($libraryAddress2)
+    {
+        $this->libraryAddress2 = $libraryAddress2;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryAddress2
+     *
+     * @return string
+     */
+    public function getLibraryAddress2()
+    {
+        return $this->libraryAddress2;
+    }
+
+    /**
+     * Set libraryCity
+     *
+     * @param string $libraryCity
+     *
+     * @return Librariest
+     */
+    public function setLibraryCity($libraryCity)
+    {
+        $this->libraryCity = $libraryCity;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryCity
+     *
+     * @return string
+     */
+    public function getLibraryCity()
+    {
+        return $this->libraryCity;
+    }
+
+    /**
+     * Set libraryState
+     *
+     * @param string $libraryState
+     *
+     * @return Librariest
+     */
+    public function setLibraryState($libraryState)
+    {
+        $this->libraryState = $libraryState;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryState
+     *
+     * @return string
+     */
+    public function getLibraryState()
+    {
+        return $this->libraryState;
+    }
+
+    /**
+     * Set libraryZipcode
+     *
+     * @param string $libraryZipcode
+     *
+     * @return Librariest
+     */
+    public function setLibraryZipcode($libraryZipcode)
+    {
+        $this->libraryZipcode = $libraryZipcode;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryZipcode
+     *
+     * @return string
+     */
+    public function getLibraryZipcode()
+    {
+        return $this->libraryZipcode;
+    }
+
+    /**
+     * Set libraryCountry
+     *
+     * @param string $libraryCountry
+     *
+     * @return Librariest
+     */
+    public function setLibraryCountry($libraryCountry)
+    {
+        $this->libraryCountry = $libraryCountry;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryCountry
+     *
+     * @return string
+     */
+    public function getLibraryCountry()
+    {
+        return $this->libraryCountry;
+    }
+
+    /**
+     * Set libraryUserDownloadLimit
+     *
+     * @param integer $libraryUserDownloadLimit
+     *
+     * @return Librariest
+     */
+    public function setLibraryUserDownloadLimit($libraryUserDownloadLimit)
+    {
+        $this->libraryUserDownloadLimit = $libraryUserDownloadLimit;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryUserDownloadLimit
+     *
+     * @return integer
+     */
+    public function getLibraryUserDownloadLimit()
+    {
+        return $this->libraryUserDownloadLimit;
+    }
+
+    /**
+     * Set libraryAdminId
+     *
+     * @param integer $libraryAdminId
+     *
+     * @return Librariest
+     */
+    public function setLibraryAdminId($libraryAdminId)
+    {
+        $this->libraryAdminId = $libraryAdminId;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryAdminId
+     *
+     * @return integer
+     */
+    public function getLibraryAdminId()
+    {
+        return $this->libraryAdminId;
+    }
+
+    /**
+     * Set libraryDownloadType
+     *
+     * @param string $libraryDownloadType
+     *
+     * @return Librariest
+     */
+    public function setLibraryDownloadType($libraryDownloadType)
+    {
+        $this->libraryDownloadType = $libraryDownloadType;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryDownloadType
+     *
+     * @return string
+     */
+    public function getLibraryDownloadType()
+    {
+        return $this->libraryDownloadType;
+    }
+
+    /**
+     * Set libraryDownloadLimit
+     *
+     * @param integer $libraryDownloadLimit
+     *
+     * @return Librariest
+     */
+    public function setLibraryDownloadLimit($libraryDownloadLimit)
+    {
+        $this->libraryDownloadLimit = $libraryDownloadLimit;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryDownloadLimit
+     *
+     * @return integer
+     */
+    public function getLibraryDownloadLimit()
+    {
+        return $this->libraryDownloadLimit;
+    }
+
+    /**
+     * Set libraryCurrentDownloads
+     *
+     * @param integer $libraryCurrentDownloads
+     *
+     * @return Librariest
+     */
+    public function setLibraryCurrentDownloads($libraryCurrentDownloads)
+    {
+        $this->libraryCurrentDownloads = $libraryCurrentDownloads;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryCurrentDownloads
+     *
+     * @return integer
+     */
+    public function getLibraryCurrentDownloads()
+    {
+        return $this->libraryCurrentDownloads;
+    }
+
+    /**
+     * Set libraryTotalDownloads
+     *
+     * @param integer $libraryTotalDownloads
+     *
+     * @return Librariest
+     */
+    public function setLibraryTotalDownloads($libraryTotalDownloads)
+    {
+        $this->libraryTotalDownloads = $libraryTotalDownloads;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryTotalDownloads
+     *
+     * @return integer
+     */
+    public function getLibraryTotalDownloads()
+    {
+        return $this->libraryTotalDownloads;
+    }
+
+    /**
+     * Set libraryAvailableDownloads
+     *
+     * @param integer $libraryAvailableDownloads
+     *
+     * @return Librariest
+     */
+    public function setLibraryAvailableDownloads($libraryAvailableDownloads)
+    {
+        $this->libraryAvailableDownloads = $libraryAvailableDownloads;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryAvailableDownloads
+     *
+     * @return integer
+     */
+    public function getLibraryAvailableDownloads()
+    {
+        return $this->libraryAvailableDownloads;
+    }
+
+    /**
+     * Set libraryStatus
+     *
+     * @param string $libraryStatus
+     *
+     * @return Librariest
+     */
+    public function setLibraryStatus($libraryStatus)
+    {
+        $this->libraryStatus = $libraryStatus;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryStatus
+     *
+     * @return string
+     */
+    public function getLibraryStatus()
+    {
+        return $this->libraryStatus;
+    }
+
+    /**
+     * Set libraryTerritory
+     *
+     * @param string $libraryTerritory
+     *
+     * @return Librariest
+     */
+    public function setLibraryTerritory($libraryTerritory)
+    {
+        $this->libraryTerritory = $libraryTerritory;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryTerritory
+     *
+     * @return string
+     */
+    public function getLibraryTerritory()
+    {
+        return $this->libraryTerritory;
+    }
+
+    /**
+     * Set libraryStatusUpdatedBy
+     *
+     * @param string $libraryStatusUpdatedBy
+     *
+     * @return Librariest
+     */
+    public function setLibraryStatusUpdatedBy($libraryStatusUpdatedBy)
+    {
+        $this->libraryStatusUpdatedBy = $libraryStatusUpdatedBy;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryStatusUpdatedBy
+     *
+     * @return string
+     */
+    public function getLibraryStatusUpdatedBy()
+    {
+        return $this->libraryStatusUpdatedBy;
+    }
+
+    /**
+     * Set libraryImageName
+     *
+     * @param string $libraryImageName
+     *
+     * @return Librariest
+     */
+    public function setLibraryImageName($libraryImageName)
+    {
+        $this->libraryImageName = $libraryImageName;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryImageName
+     *
+     * @return string
+     */
+    public function getLibraryImageName()
+    {
+        return $this->libraryImageName;
+    }
+
+    /**
+     * Set libraryBlockExplicitContent
+     *
+     * @param string $libraryBlockExplicitContent
+     *
+     * @return Librariest
+     */
+    public function setLibraryBlockExplicitContent($libraryBlockExplicitContent)
+    {
+        $this->libraryBlockExplicitContent = $libraryBlockExplicitContent;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryBlockExplicitContent
+     *
+     * @return string
+     */
+    public function getLibraryBlockExplicitContent()
+    {
+        return $this->libraryBlockExplicitContent;
+    }
+
+    /**
+     * Set libraryUnlimited
+     *
+     * @param string $libraryUnlimited
+     *
+     * @return Librariest
+     */
+    public function setLibraryUnlimited($libraryUnlimited)
+    {
+        $this->libraryUnlimited = $libraryUnlimited;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryUnlimited
+     *
+     * @return string
+     */
+    public function getLibraryUnlimited()
+    {
+        return $this->libraryUnlimited;
+    }
+
+    /**
+     * Set libraryLanguage
+     *
+     * @param string $libraryLanguage
+     *
+     * @return Librariest
+     */
+    public function setLibraryLanguage($libraryLanguage)
+    {
+        $this->libraryLanguage = $libraryLanguage;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryLanguage
+     *
+     * @return string
+     */
+    public function getLibraryLanguage()
+    {
+        return $this->libraryLanguage;
+    }
+
+    /**
+     * Set showLibraryName
+     *
+     * @param string $showLibraryName
+     *
+     * @return Librariest
+     */
+    public function setShowLibraryName($showLibraryName)
+    {
+        $this->showLibraryName = $showLibraryName;
+
+        return $this;
+    }
+
+    /**
+     * Get showLibraryName
+     *
+     * @return string
+     */
+    public function getShowLibraryName()
+    {
+        return $this->showLibraryName;
+    }
+
+    /**
+     * Set libraryContractStartDate
+     *
+     * @param \DateTime $libraryContractStartDate
+     *
+     * @return Librariest
+     */
+    public function setLibraryContractStartDate($libraryContractStartDate)
+    {
+        $this->libraryContractStartDate = $libraryContractStartDate;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryContractStartDate
+     *
+     * @return \DateTime
+     */
+    public function getLibraryContractStartDate()
+    {
+        return $this->libraryContractStartDate;
+    }
+
+    /**
+     * Set libraryContractEndDate
+     *
+     * @param \DateTime $libraryContractEndDate
+     *
+     * @return Librariest
+     */
+    public function setLibraryContractEndDate($libraryContractEndDate)
+    {
+        $this->libraryContractEndDate = $libraryContractEndDate;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryContractEndDate
+     *
+     * @return \DateTime
+     */
+    public function getLibraryContractEndDate()
+    {
+        return $this->libraryContractEndDate;
+    }
+
+    /**
+     * Set facebookIcon
+     *
+     * @param string $facebookIcon
+     *
+     * @return Librariest
+     */
+    public function setFacebookIcon($facebookIcon)
+    {
+        $this->facebookIcon = $facebookIcon;
+
+        return $this;
+    }
+
+    /**
+     * Get facebookIcon
+     *
+     * @return string
+     */
+    public function getFacebookIcon()
+    {
+        return $this->facebookIcon;
+    }
+
+    /**
+     * Set youtubeIcon
+     *
+     * @param string $youtubeIcon
+     *
+     * @return Librariest
+     */
+    public function setYoutubeIcon($youtubeIcon)
+    {
+        $this->youtubeIcon = $youtubeIcon;
+
+        return $this;
+    }
+
+    /**
+     * Get youtubeIcon
+     *
+     * @return string
+     */
+    public function getYoutubeIcon()
+    {
+        return $this->youtubeIcon;
+    }
+
+    /**
+     * Set twiterIcon
+     *
+     * @param string $twiterIcon
+     *
+     * @return Librariest
+     */
+    public function setTwiterIcon($twiterIcon)
+    {
+        $this->twiterIcon = $twiterIcon;
+
+        return $this;
+    }
+
+    /**
+     * Get twiterIcon
+     *
+     * @return string
+     */
+    public function getTwiterIcon()
+    {
+        return $this->twiterIcon;
+    }
+
+    /**
+     * Set created
+     *
+     * @param \DateTime $created
+     *
+     * @return Librariest
+     */
+    public function setCreated($created)
+    {
+        $this->created = $created;
+
+        return $this;
+    }
+
+    /**
+     * Get created
+     *
+     * @return \DateTime
+     */
+    public function getCreated()
+    {
+        return $this->created;
+    }
+
+    /**
+     * Set modified
+     *
+     * @param \DateTime $modified
+     *
+     * @return Librariest
+     */
+    public function setModified($modified)
+    {
+        $this->modified = $modified;
+
+        return $this;
+    }
+
+    /**
+     * Get modified
+     *
+     * @return \DateTime
+     */
+    public function getModified()
+    {
+        return $this->modified;
+    }
+
+    /**
+     * Set libraryExpDateFormat
+     *
+     * @param string $libraryExpDateFormat
+     *
+     * @return Librariest
+     */
+    public function setLibraryExpDateFormat($libraryExpDateFormat)
+    {
+        $this->libraryExpDateFormat = $libraryExpDateFormat;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryExpDateFormat
+     *
+     * @return string
+     */
+    public function getLibraryExpDateFormat()
+    {
+        return $this->libraryExpDateFormat;
+    }
+
+    /**
+     * Set genericCount
+     *
+     * @param integer $genericCount
+     *
+     * @return Librariest
+     */
+    public function setGenericCount($genericCount)
+    {
+        $this->genericCount = $genericCount;
+
+        return $this;
+    }
+
+    /**
+     * Get genericCount
+     *
+     * @return integer
+     */
+    public function getGenericCount()
+    {
+        return $this->genericCount;
+    }
+
+    /**
+     * Set librarySipCommand
+     *
+     * @param string $librarySipCommand
+     *
+     * @return Librariest
+     */
+    public function setLibrarySipCommand($librarySipCommand)
+    {
+        $this->librarySipCommand = $librarySipCommand;
+
+        return $this;
+    }
+
+    /**
+     * Get librarySipCommand
+     *
+     * @return string
+     */
+    public function getLibrarySipCommand()
+    {
+        return $this->librarySipCommand;
+    }
+
+    /**
+     * Set isSipOverSsh
+     *
+     * @param integer $isSipOverSsh
+     *
+     * @return Librariest
+     */
+    public function setIsSipOverSsh($isSipOverSsh)
+    {
+        $this->isSipOverSsh = $isSipOverSsh;
+
+        return $this;
+    }
+
+    /**
+     * Get isSipOverSsh
+     *
+     * @return integer
+     */
+    public function getIsSipOverSsh()
+    {
+        return $this->isSipOverSsh;
+    }
+
+    /**
+     * Set minimumCardLength
+     *
+     * @param integer $minimumCardLength
+     *
+     * @return Librariest
+     */
+    public function setMinimumCardLength($minimumCardLength)
+    {
+        $this->minimumCardLength = $minimumCardLength;
+
+        return $this;
+    }
+
+    /**
+     * Get minimumCardLength
+     *
+     * @return integer
+     */
+    public function getMinimumCardLength()
+    {
+        return $this->minimumCardLength;
+    }
+
+    /**
+     * Set timezone
+     *
+     * @param string $timezone
+     *
+     * @return Librariest
+     */
+    public function setTimezone($timezone)
+    {
+        $this->timezone = $timezone;
+
+        return $this;
+    }
+
+    /**
+     * Get timezone
+     *
+     * @return string
+     */
+    public function getTimezone()
+    {
+        return $this->timezone;
+    }
+
+    /**
+     * Set libraryType
+     *
+     * @param boolean $libraryType
+     *
+     * @return Librariest
+     */
+    public function setLibraryType($libraryType)
+    {
+        $this->libraryType = $libraryType;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryType
+     *
+     * @return boolean
+     */
+    public function getLibraryType()
+    {
+        return $this->libraryType;
+    }
+
+    /**
+     * Set testLibraryType
+     *
+     * @param boolean $testLibraryType
+     *
+     * @return Librariest
+     */
+    public function setTestLibraryType($testLibraryType)
+    {
+        $this->testLibraryType = $testLibraryType;
+
+        return $this;
+    }
+
+    /**
+     * Get testLibraryType
+     *
+     * @return boolean
+     */
+    public function getTestLibraryType()
+    {
+        return $this->testLibraryType;
+    }
+
+    /**
+     * Set libraryStreamingHours
+     *
+     * @param integer $libraryStreamingHours
+     *
+     * @return Librariest
+     */
+    public function setLibraryStreamingHours($libraryStreamingHours)
+    {
+        $this->libraryStreamingHours = $libraryStreamingHours;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryStreamingHours
+     *
+     * @return integer
+     */
+    public function getLibraryStreamingHours()
+    {
+        return $this->libraryStreamingHours;
+    }
+
+    /**
+     * Set libraryAnnouncement
+     *
+     * @param boolean $libraryAnnouncement
+     *
+     * @return Librariest
+     */
+    public function setLibraryAnnouncement($libraryAnnouncement)
+    {
+        $this->libraryAnnouncement = $libraryAnnouncement;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryAnnouncement
+     *
+     * @return boolean
+     */
+    public function getLibraryAnnouncement()
+    {
+        return $this->libraryAnnouncement;
+    }
+
+    /**
+     * Set optoutEmailNotification
+     *
+     * @param string $optoutEmailNotification
+     *
+     * @return Librariest
+     */
+    public function setOptoutEmailNotification($optoutEmailNotification)
+    {
+        $this->optoutEmailNotification = $optoutEmailNotification;
+
+        return $this;
+    }
+
+    /**
+     * Get optoutEmailNotification
+     *
+     * @return string
+     */
+    public function getOptoutEmailNotification()
+    {
+        return $this->optoutEmailNotification;
+    }
+
+    /**
+     * Set showBarcode
+     *
+     * @param integer $showBarcode
+     *
+     * @return Librariest
+     */
+    public function setShowBarcode($showBarcode)
+    {
+        $this->showBarcode = $showBarcode;
+
+        return $this;
+    }
+
+    /**
+     * Get showBarcode
+     *
+     * @return integer
+     */
+    public function getShowBarcode()
+    {
+        return $this->showBarcode;
+    }
+
+    /**
+     * Set libraryMultiAuthentication
+     *
+     * @param boolean $libraryMultiAuthentication
+     *
+     * @return Librariest
+     */
+    public function setLibraryMultiAuthentication($libraryMultiAuthentication)
+    {
+        $this->libraryMultiAuthentication = $libraryMultiAuthentication;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryMultiAuthentication
+     *
+     * @return boolean
+     */
+    public function getLibraryMultiAuthentication()
+    {
+        return $this->libraryMultiAuthentication;
+    }
+
+    /**
+     * Set crmLibid
+     *
+     * @param integer $crmLibid
+     *
+     * @return Librariest
+     */
+    public function setCrmLibid($crmLibid)
+    {
+        $this->crmLibid = $crmLibid;
+
+        return $this;
+    }
+
+    /**
+     * Get crmLibid
+     *
+     * @return integer
+     */
+    public function getCrmLibid()
+    {
+        return $this->crmLibid;
+    }
+
+    /**
+     * Set ageBlock
+     *
+     * @param string $ageBlock
+     *
+     * @return Librariest
+     */
+    public function setAgeBlock($ageBlock)
+    {
+        $this->ageBlock = $ageBlock;
+
+        return $this;
+    }
+
+    /**
+     * Get ageBlock
+     *
+     * @return string
+     */
+    public function getAgeBlock()
+    {
+        return $this->ageBlock;
+    }
+
+    /**
+     * Set statusOverride
+     *
+     * @param string $statusOverride
+     *
+     * @return Librariest
+     */
+    public function setStatusOverride($statusOverride)
+    {
+        $this->statusOverride = $statusOverride;
+
+        return $this;
+    }
+
+    /**
+     * Get statusOverride
+     *
+     * @return string
+     */
+    public function getStatusOverride()
+    {
+        return $this->statusOverride;
+    }
+
+    /**
+     * Set testingMode
+     *
+     * @param integer $testingMode
+     *
+     * @return Librariest
+     */
+    public function setTestingMode($testingMode)
+    {
+        $this->testingMode = $testingMode;
+
+        return $this;
+    }
+
+    /**
+     * Get testingMode
+     *
+     * @return integer
+     */
+    public function getTestingMode()
+    {
+        return $this->testingMode;
+    }
+
+    /**
+     * Set optoutIpLookup
+     *
+     * @param string $optoutIpLookup
+     *
+     * @return Librariest
+     */
+    public function setOptoutIpLookup($optoutIpLookup)
+    {
+        $this->optoutIpLookup = $optoutIpLookup;
+
+        return $this;
+    }
+
+    /**
+     * Get optoutIpLookup
+     *
+     * @return string
+     */
+    public function getOptoutIpLookup()
+    {
+        return $this->optoutIpLookup;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+}

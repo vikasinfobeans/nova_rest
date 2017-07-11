@@ -78,5 +78,206 @@ class DeviceMasters
     private $id;
 
 
-}
 
+    /**
+     * Set patronId
+     *
+     * @param string $patronId
+     *
+     * @return DeviceMasters
+     */
+    public function setPatronId($patronId)
+    {
+        $this->patronId = $patronId;
+
+        return $this;
+    }
+
+    /**
+     * Get patronId
+     *
+     * @return string
+     */
+    public function getPatronId()
+    {
+        return $this->patronId;
+    }
+
+    /**
+     * Set libraryId
+     *
+     * @param integer $libraryId
+     *
+     * @return DeviceMasters
+     */
+    public function setLibraryId($libraryId)
+    {
+        $this->libraryId = $libraryId;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryId
+     *
+     * @return integer
+     */
+    public function getLibraryId()
+    {
+        return $this->libraryId;
+    }
+
+    /**
+     * Set systemType
+     *
+     * @param integer $systemType
+     *
+     * @return DeviceMasters
+     */
+    public function setSystemType($systemType)
+    {
+        $this->systemType = $systemType;
+
+        return $this;
+    }
+
+    /**
+     * Get systemType
+     *
+     * @return integer
+     */
+    public function getSystemType()
+    {
+        return $this->systemType;
+    }
+
+    /**
+     * Set deviceId
+     *
+     * @param string $deviceId
+     *
+     * @return DeviceMasters
+     */
+    public function setDeviceId($deviceId)
+    {
+        $this->deviceId = $deviceId;
+
+        return $this;
+    }
+
+    /**
+     * Get deviceId
+     *
+     * @return string
+     */
+    public function getDeviceId()
+    {
+        return $this->deviceId;
+    }
+
+    /**
+     * Set createdDate
+     *
+     * @param \DateTime $createdDate
+     *
+     * @return DeviceMasters
+     */
+    public function setCreatedDate($createdDate)
+    {
+        $this->createdDate = $createdDate;
+
+        return $this;
+    }
+
+    /**
+     * Get createdDate
+     *
+     * @return \DateTime
+     */
+    public function getCreatedDate()
+    {
+        return $this->createdDate;
+    }
+
+    /**
+     * Set registrationId
+     *
+     * @param string $registrationId
+     *
+     * @return DeviceMasters
+     */
+    public function setRegistrationId($registrationId)
+    {
+        $this->registrationId = $registrationId;
+
+        return $this;
+    }
+
+    /**
+     * Get registrationId
+     *
+     * @return string
+     */
+    public function getRegistrationId()
+    {
+        return $this->registrationId;
+    }
+
+    /**
+     * Set userLanguage
+     *
+     * @param string $userLanguage
+     *
+     * @return DeviceMasters
+     */
+    public function setUserLanguage($userLanguage)
+    {
+        $this->userLanguage = $userLanguage;
+
+        return $this;
+    }
+
+    /**
+     * Get userLanguage
+     *
+     * @return string
+     */
+    public function getUserLanguage()
+    {
+        return $this->userLanguage;
+    }
+
+    /**
+     * Set authenticationToken
+     *
+     * @param string $authenticationToken
+     *
+     * @return DeviceMasters
+     */
+    public function setAuthenticationToken($authenticationToken)
+    {
+        $this->authenticationToken = $authenticationToken;
+
+        return $this;
+    }
+
+    /**
+     * Get authenticationToken
+     *
+     * @return string
+     */
+    public function getAuthenticationToken()
+    {
+        return $this->authenticationToken;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+}

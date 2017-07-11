@@ -29,5 +29,38 @@ class SphCounter
     private $counterId;
 
 
-}
 
+    /**
+     * Set maxDocId
+     *
+     * @param integer $maxDocId
+     *
+     * @return SphCounter
+     */
+    public function setMaxDocId($maxDocId)
+    {
+        $this->maxDocId = $maxDocId;
+
+        return $this;
+    }
+
+    /**
+     * Get maxDocId
+     *
+     * @return integer
+     */
+    public function getMaxDocId()
+    {
+        return $this->maxDocId;
+    }
+
+    /**
+     * Get counterId
+     *
+     * @return integer
+     */
+    public function getCounterId()
+    {
+        return $this->counterId;
+    }
+}

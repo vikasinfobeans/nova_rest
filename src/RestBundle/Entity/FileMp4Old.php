@@ -36,5 +36,62 @@ class FileMp4Old
     private $fileid;
 
 
-}
 
+    /**
+     * Set saveasname
+     *
+     * @param string $saveasname
+     *
+     * @return FileMp4Old
+     */
+    public function setSaveasname($saveasname)
+    {
+        $this->saveasname = $saveasname;
+
+        return $this;
+    }
+
+    /**
+     * Get saveasname
+     *
+     * @return string
+     */
+    public function getSaveasname()
+    {
+        return $this->saveasname;
+    }
+
+    /**
+     * Set cdnpath
+     *
+     * @param string $cdnpath
+     *
+     * @return FileMp4Old
+     */
+    public function setCdnpath($cdnpath)
+    {
+        $this->cdnpath = $cdnpath;
+
+        return $this;
+    }
+
+    /**
+     * Get cdnpath
+     *
+     * @return string
+     */
+    public function getCdnpath()
+    {
+        return $this->cdnpath;
+    }
+
+    /**
+     * Get fileid
+     *
+     * @return integer
+     */
+    public function getFileid()
+    {
+        return $this->fileid;
+    }
+}

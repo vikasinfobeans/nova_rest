@@ -43,5 +43,86 @@ class MemDatas
     private $id;
 
 
-}
 
+    /**
+     * Set variInfo
+     *
+     * @param string $variInfo
+     *
+     * @return MemDatas
+     */
+    public function setVariInfo($variInfo)
+    {
+        $this->variInfo = $variInfo;
+
+        return $this;
+    }
+
+    /**
+     * Get variInfo
+     *
+     * @return string
+     */
+    public function getVariInfo()
+    {
+        return $this->variInfo;
+    }
+
+    /**
+     * Set cacheVariableName
+     *
+     * @param string $cacheVariableName
+     *
+     * @return MemDatas
+     */
+    public function setCacheVariableName($cacheVariableName)
+    {
+        $this->cacheVariableName = $cacheVariableName;
+
+        return $this;
+    }
+
+    /**
+     * Get cacheVariableName
+     *
+     * @return string
+     */
+    public function getCacheVariableName()
+    {
+        return $this->cacheVariableName;
+    }
+
+    /**
+     * Set modified
+     *
+     * @param \DateTime $modified
+     *
+     * @return MemDatas
+     */
+    public function setModified($modified)
+    {
+        $this->modified = $modified;
+
+        return $this;
+    }
+
+    /**
+     * Get modified
+     *
+     * @return \DateTime
+     */
+    public function getModified()
+    {
+        return $this->modified;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+}

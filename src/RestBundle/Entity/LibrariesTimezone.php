@@ -29,5 +29,38 @@ class LibrariesTimezone
     private $libraryId;
 
 
-}
 
+    /**
+     * Set librariesTimezone
+     *
+     * @param string $librariesTimezone
+     *
+     * @return LibrariesTimezone
+     */
+    public function setLibrariesTimezone($librariesTimezone)
+    {
+        $this->librariesTimezone = $librariesTimezone;
+
+        return $this;
+    }
+
+    /**
+     * Get librariesTimezone
+     *
+     * @return string
+     */
+    public function getLibrariesTimezone()
+    {
+        return $this->librariesTimezone;
+    }
+
+    /**
+     * Get libraryId
+     *
+     * @return integer
+     */
+    public function getLibraryId()
+    {
+        return $this->libraryId;
+    }
+}

@@ -80,5 +80,220 @@ class BmCountries
     private $prodid;
 
 
-}
 
+    /**
+     * Set territory
+     *
+     * @param string $territory
+     *
+     * @return BmCountries
+     */
+    public function setTerritory($territory)
+    {
+        $this->territory = $territory;
+
+        return $this;
+    }
+
+    /**
+     * Get territory
+     *
+     * @return string
+     */
+    public function getTerritory()
+    {
+        return $this->territory;
+    }
+
+    /**
+     * Set salesdate
+     *
+     * @param \DateTime $salesdate
+     *
+     * @return BmCountries
+     */
+    public function setSalesdate($salesdate)
+    {
+        $this->salesdate = $salesdate;
+
+        return $this;
+    }
+
+    /**
+     * Get salesdate
+     *
+     * @return \DateTime
+     */
+    public function getSalesdate()
+    {
+        return $this->salesdate;
+    }
+
+    /**
+     * Set territoryid
+     *
+     * @param integer $territoryid
+     *
+     * @return BmCountries
+     */
+    public function setTerritoryid($territoryid)
+    {
+        $this->territoryid = $territoryid;
+
+        return $this;
+    }
+
+    /**
+     * Get territoryid
+     *
+     * @return integer
+     */
+    public function getTerritoryid()
+    {
+        return $this->territoryid;
+    }
+
+    /**
+     * Set downloadstatus
+     *
+     * @param boolean $downloadstatus
+     *
+     * @return BmCountries
+     */
+    public function setDownloadstatus($downloadstatus)
+    {
+        $this->downloadstatus = $downloadstatus;
+
+        return $this;
+    }
+
+    /**
+     * Get downloadstatus
+     *
+     * @return boolean
+     */
+    public function getDownloadstatus()
+    {
+        return $this->downloadstatus;
+    }
+
+    /**
+     * Set streamingstatus
+     *
+     * @param boolean $streamingstatus
+     *
+     * @return BmCountries
+     */
+    public function setStreamingstatus($streamingstatus)
+    {
+        $this->streamingstatus = $streamingstatus;
+
+        return $this;
+    }
+
+    /**
+     * Get streamingstatus
+     *
+     * @return boolean
+     */
+    public function getStreamingstatus()
+    {
+        return $this->streamingstatus;
+    }
+
+    /**
+     * Set streamingsalesdate
+     *
+     * @param \DateTime $streamingsalesdate
+     *
+     * @return BmCountries
+     */
+    public function setStreamingsalesdate($streamingsalesdate)
+    {
+        $this->streamingsalesdate = $streamingsalesdate;
+
+        return $this;
+    }
+
+    /**
+     * Get streamingsalesdate
+     *
+     * @return \DateTime
+     */
+    public function getStreamingsalesdate()
+    {
+        return $this->streamingsalesdate;
+    }
+
+    /**
+     * Set updateon
+     *
+     * @param \DateTime $updateon
+     *
+     * @return BmCountries
+     */
+    public function setUpdateon($updateon)
+    {
+        $this->updateon = $updateon;
+
+        return $this;
+    }
+
+    /**
+     * Get updateon
+     *
+     * @return \DateTime
+     */
+    public function getUpdateon()
+    {
+        return $this->updateon;
+    }
+
+    /**
+     * Set providerType
+     *
+     * @param string $providerType
+     *
+     * @return BmCountries
+     */
+    public function setProviderType($providerType)
+    {
+        $this->providerType = $providerType;
+
+        return $this;
+    }
+
+    /**
+     * Get providerType
+     *
+     * @return string
+     */
+    public function getProviderType()
+    {
+        return $this->providerType;
+    }
+
+    /**
+     * Set prodid
+     *
+     * @param integer $prodid
+     *
+     * @return BmCountries
+     */
+    public function setProdid($prodid)
+    {
+        $this->prodid = $prodid;
+
+        return $this;
+    }
+
+    /**
+     * Get prodid
+     *
+     * @return integer
+     */
+    public function getProdid()
+    {
+        return $this->prodid;
+    }
+}

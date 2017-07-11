@@ -120,5 +120,350 @@ class AuthenticationTokens
     private $id;
 
 
-}
 
+    /**
+     * Set patronId
+     *
+     * @param string $patronId
+     *
+     * @return AuthenticationTokens
+     */
+    public function setPatronId($patronId)
+    {
+        $this->patronId = $patronId;
+
+        return $this;
+    }
+
+    /**
+     * Get patronId
+     *
+     * @return string
+     */
+    public function getPatronId()
+    {
+        return $this->patronId;
+    }
+
+    /**
+     * Set libraryId
+     *
+     * @param integer $libraryId
+     *
+     * @return AuthenticationTokens
+     */
+    public function setLibraryId($libraryId)
+    {
+        $this->libraryId = $libraryId;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryId
+     *
+     * @return integer
+     */
+    public function getLibraryId()
+    {
+        return $this->libraryId;
+    }
+
+    /**
+     * Set token
+     *
+     * @param string $token
+     *
+     * @return AuthenticationTokens
+     */
+    public function setToken($token)
+    {
+        $this->token = $token;
+
+        return $this;
+    }
+
+    /**
+     * Get token
+     *
+     * @return string
+     */
+    public function getToken()
+    {
+        return $this->token;
+    }
+
+    /**
+     * Set authTime
+     *
+     * @param integer $authTime
+     *
+     * @return AuthenticationTokens
+     */
+    public function setAuthTime($authTime)
+    {
+        $this->authTime = $authTime;
+
+        return $this;
+    }
+
+    /**
+     * Get authTime
+     *
+     * @return integer
+     */
+    public function getAuthTime()
+    {
+        return $this->authTime;
+    }
+
+    /**
+     * Set agent
+     *
+     * @param string $agent
+     *
+     * @return AuthenticationTokens
+     */
+    public function setAgent($agent)
+    {
+        $this->agent = $agent;
+
+        return $this;
+    }
+
+    /**
+     * Get agent
+     *
+     * @return string
+     */
+    public function getAgent()
+    {
+        return $this->agent;
+    }
+
+    /**
+     * Set authMethod
+     *
+     * @param string $authMethod
+     *
+     * @return AuthenticationTokens
+     */
+    public function setAuthMethod($authMethod)
+    {
+        $this->authMethod = $authMethod;
+
+        return $this;
+    }
+
+    /**
+     * Get authMethod
+     *
+     * @return string
+     */
+    public function getAuthMethod()
+    {
+        return $this->authMethod;
+    }
+
+    /**
+     * Set authtype
+     *
+     * @param string $authtype
+     *
+     * @return AuthenticationTokens
+     */
+    public function setAuthtype($authtype)
+    {
+        $this->authtype = $authtype;
+
+        return $this;
+    }
+
+    /**
+     * Get authtype
+     *
+     * @return string
+     */
+    public function getAuthtype()
+    {
+        return $this->authtype;
+    }
+
+    /**
+     * Set email
+     *
+     * @param string $email
+     *
+     * @return AuthenticationTokens
+     */
+    public function setEmail($email)
+    {
+        $this->email = $email;
+
+        return $this;
+    }
+
+    /**
+     * Get email
+     *
+     * @return string
+     */
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    /**
+     * Set password
+     *
+     * @param string $password
+     *
+     * @return AuthenticationTokens
+     */
+    public function setPassword($password)
+    {
+        $this->password = $password;
+
+        return $this;
+    }
+
+    /**
+     * Get password
+     *
+     * @return string
+     */
+    public function getPassword()
+    {
+        return $this->password;
+    }
+
+    /**
+     * Set card
+     *
+     * @param string $card
+     *
+     * @return AuthenticationTokens
+     */
+    public function setCard($card)
+    {
+        $this->card = $card;
+
+        return $this;
+    }
+
+    /**
+     * Get card
+     *
+     * @return string
+     */
+    public function getCard()
+    {
+        return $this->card;
+    }
+
+    /**
+     * Set pin
+     *
+     * @param string $pin
+     *
+     * @return AuthenticationTokens
+     */
+    public function setPin($pin)
+    {
+        $this->pin = $pin;
+
+        return $this;
+    }
+
+    /**
+     * Get pin
+     *
+     * @return string
+     */
+    public function getPin()
+    {
+        return $this->pin;
+    }
+
+    /**
+     * Set lastName
+     *
+     * @param string $lastName
+     *
+     * @return AuthenticationTokens
+     */
+    public function setLastName($lastName)
+    {
+        $this->lastName = $lastName;
+
+        return $this;
+    }
+
+    /**
+     * Get lastName
+     *
+     * @return string
+     */
+    public function getLastName()
+    {
+        return $this->lastName;
+    }
+
+    /**
+     * Set downloadcheck
+     *
+     * @param string $downloadcheck
+     *
+     * @return AuthenticationTokens
+     */
+    public function setDownloadcheck($downloadcheck)
+    {
+        $this->downloadcheck = $downloadcheck;
+
+        return $this;
+    }
+
+    /**
+     * Get downloadcheck
+     *
+     * @return string
+     */
+    public function getDownloadcheck()
+    {
+        return $this->downloadcheck;
+    }
+
+    /**
+     * Set patronAge
+     *
+     * @param string $patronAge
+     *
+     * @return AuthenticationTokens
+     */
+    public function setPatronAge($patronAge)
+    {
+        $this->patronAge = $patronAge;
+
+        return $this;
+    }
+
+    /**
+     * Get patronAge
+     *
+     * @return string
+     */
+    public function getPatronAge()
+    {
+        return $this->patronAge;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+}

@@ -45,4 +45,3 @@ class AccessToken extends BaseAccessToken
         return $this->id;
     }
 }
-

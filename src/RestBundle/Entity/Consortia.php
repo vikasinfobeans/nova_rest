@@ -43,5 +43,86 @@ class Consortia
     private $id;
 
 
-}
 
+    /**
+     * Set consortiumName
+     *
+     * @param string $consortiumName
+     *
+     * @return Consortia
+     */
+    public function setConsortiumName($consortiumName)
+    {
+        $this->consortiumName = $consortiumName;
+
+        return $this;
+    }
+
+    /**
+     * Get consortiumName
+     *
+     * @return string
+     */
+    public function getConsortiumName()
+    {
+        return $this->consortiumName;
+    }
+
+    /**
+     * Set consortiumKey
+     *
+     * @param string $consortiumKey
+     *
+     * @return Consortia
+     */
+    public function setConsortiumKey($consortiumKey)
+    {
+        $this->consortiumKey = $consortiumKey;
+
+        return $this;
+    }
+
+    /**
+     * Get consortiumKey
+     *
+     * @return string
+     */
+    public function getConsortiumKey()
+    {
+        return $this->consortiumKey;
+    }
+
+    /**
+     * Set crmConsortiaId
+     *
+     * @param integer $crmConsortiaId
+     *
+     * @return Consortia
+     */
+    public function setCrmConsortiaId($crmConsortiaId)
+    {
+        $this->crmConsortiaId = $crmConsortiaId;
+
+        return $this;
+    }
+
+    /**
+     * Get crmConsortiaId
+     *
+     * @return integer
+     */
+    public function getCrmConsortiaId()
+    {
+        return $this->crmConsortiaId;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+}

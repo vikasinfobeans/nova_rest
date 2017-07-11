@@ -36,5 +36,62 @@ class Product
     private $pid;
 
 
-}
 
+    /**
+     * Set prodid
+     *
+     * @param integer $prodid
+     *
+     * @return Product
+     */
+    public function setProdid($prodid)
+    {
+        $this->prodid = $prodid;
+
+        return $this;
+    }
+
+    /**
+     * Get prodid
+     *
+     * @return integer
+     */
+    public function getProdid()
+    {
+        return $this->prodid;
+    }
+
+    /**
+     * Set providerType
+     *
+     * @param string $providerType
+     *
+     * @return Product
+     */
+    public function setProviderType($providerType)
+    {
+        $this->providerType = $providerType;
+
+        return $this;
+    }
+
+    /**
+     * Get providerType
+     *
+     * @return string
+     */
+    public function getProviderType()
+    {
+        return $this->providerType;
+    }
+
+    /**
+     * Get pid
+     *
+     * @return integer
+     */
+    public function getPid()
+    {
+        return $this->pid;
+    }
+}

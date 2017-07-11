@@ -78,5 +78,206 @@ class LibraryPurchasesStreaming
     private $id;
 
 
-}
 
+    /**
+     * Set libraryId
+     *
+     * @param integer $libraryId
+     *
+     * @return LibraryPurchasesStreaming
+     */
+    public function setLibraryId($libraryId)
+    {
+        $this->libraryId = $libraryId;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryId
+     *
+     * @return integer
+     */
+    public function getLibraryId()
+    {
+        return $this->libraryId;
+    }
+
+    /**
+     * Set purchasedOrderNum
+     *
+     * @param string $purchasedOrderNum
+     *
+     * @return LibraryPurchasesStreaming
+     */
+    public function setPurchasedOrderNum($purchasedOrderNum)
+    {
+        $this->purchasedOrderNum = $purchasedOrderNum;
+
+        return $this;
+    }
+
+    /**
+     * Get purchasedOrderNum
+     *
+     * @return string
+     */
+    public function getPurchasedOrderNum()
+    {
+        return $this->purchasedOrderNum;
+    }
+
+    /**
+     * Set purchasedHours
+     *
+     * @param integer $purchasedHours
+     *
+     * @return LibraryPurchasesStreaming
+     */
+    public function setPurchasedHours($purchasedHours)
+    {
+        $this->purchasedHours = $purchasedHours;
+
+        return $this;
+    }
+
+    /**
+     * Get purchasedHours
+     *
+     * @return integer
+     */
+    public function getPurchasedHours()
+    {
+        return $this->purchasedHours;
+    }
+
+    /**
+     * Set purchasedAmount
+     *
+     * @param float $purchasedAmount
+     *
+     * @return LibraryPurchasesStreaming
+     */
+    public function setPurchasedAmount($purchasedAmount)
+    {
+        $this->purchasedAmount = $purchasedAmount;
+
+        return $this;
+    }
+
+    /**
+     * Get purchasedAmount
+     *
+     * @return float
+     */
+    public function getPurchasedAmount()
+    {
+        return $this->purchasedAmount;
+    }
+
+    /**
+     * Set created
+     *
+     * @param \DateTime $created
+     *
+     * @return LibraryPurchasesStreaming
+     */
+    public function setCreated($created)
+    {
+        $this->created = $created;
+
+        return $this;
+    }
+
+    /**
+     * Get created
+     *
+     * @return \DateTime
+     */
+    public function getCreated()
+    {
+        return $this->created;
+    }
+
+    /**
+     * Set modified
+     *
+     * @param \DateTime $modified
+     *
+     * @return LibraryPurchasesStreaming
+     */
+    public function setModified($modified)
+    {
+        $this->modified = $modified;
+
+        return $this;
+    }
+
+    /**
+     * Get modified
+     *
+     * @return \DateTime
+     */
+    public function getModified()
+    {
+        return $this->modified;
+    }
+
+    /**
+     * Set acv
+     *
+     * @param float $acv
+     *
+     * @return LibraryPurchasesStreaming
+     */
+    public function setAcv($acv)
+    {
+        $this->acv = $acv;
+
+        return $this;
+    }
+
+    /**
+     * Get acv
+     *
+     * @return float
+     */
+    public function getAcv()
+    {
+        return $this->acv;
+    }
+
+    /**
+     * Set circulation
+     *
+     * @param string $circulation
+     *
+     * @return LibraryPurchasesStreaming
+     */
+    public function setCirculation($circulation)
+    {
+        $this->circulation = $circulation;
+
+        return $this;
+    }
+
+    /**
+     * Get circulation
+     *
+     * @return string
+     */
+    public function getCirculation()
+    {
+        return $this->circulation;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+}

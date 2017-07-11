@@ -103,5 +103,292 @@ class RsdbaChecksums
     private $chunk;
 
 
-}
 
+    /**
+     * Set chunkTime
+     *
+     * @param float $chunkTime
+     *
+     * @return RsdbaChecksums
+     */
+    public function setChunkTime($chunkTime)
+    {
+        $this->chunkTime = $chunkTime;
+
+        return $this;
+    }
+
+    /**
+     * Get chunkTime
+     *
+     * @return float
+     */
+    public function getChunkTime()
+    {
+        return $this->chunkTime;
+    }
+
+    /**
+     * Set chunkIndex
+     *
+     * @param string $chunkIndex
+     *
+     * @return RsdbaChecksums
+     */
+    public function setChunkIndex($chunkIndex)
+    {
+        $this->chunkIndex = $chunkIndex;
+
+        return $this;
+    }
+
+    /**
+     * Get chunkIndex
+     *
+     * @return string
+     */
+    public function getChunkIndex()
+    {
+        return $this->chunkIndex;
+    }
+
+    /**
+     * Set lowerBoundary
+     *
+     * @param string $lowerBoundary
+     *
+     * @return RsdbaChecksums
+     */
+    public function setLowerBoundary($lowerBoundary)
+    {
+        $this->lowerBoundary = $lowerBoundary;
+
+        return $this;
+    }
+
+    /**
+     * Get lowerBoundary
+     *
+     * @return string
+     */
+    public function getLowerBoundary()
+    {
+        return $this->lowerBoundary;
+    }
+
+    /**
+     * Set upperBoundary
+     *
+     * @param string $upperBoundary
+     *
+     * @return RsdbaChecksums
+     */
+    public function setUpperBoundary($upperBoundary)
+    {
+        $this->upperBoundary = $upperBoundary;
+
+        return $this;
+    }
+
+    /**
+     * Get upperBoundary
+     *
+     * @return string
+     */
+    public function getUpperBoundary()
+    {
+        return $this->upperBoundary;
+    }
+
+    /**
+     * Set thisCrc
+     *
+     * @param string $thisCrc
+     *
+     * @return RsdbaChecksums
+     */
+    public function setThisCrc($thisCrc)
+    {
+        $this->thisCrc = $thisCrc;
+
+        return $this;
+    }
+
+    /**
+     * Get thisCrc
+     *
+     * @return string
+     */
+    public function getThisCrc()
+    {
+        return $this->thisCrc;
+    }
+
+    /**
+     * Set thisCnt
+     *
+     * @param integer $thisCnt
+     *
+     * @return RsdbaChecksums
+     */
+    public function setThisCnt($thisCnt)
+    {
+        $this->thisCnt = $thisCnt;
+
+        return $this;
+    }
+
+    /**
+     * Get thisCnt
+     *
+     * @return integer
+     */
+    public function getThisCnt()
+    {
+        return $this->thisCnt;
+    }
+
+    /**
+     * Set masterCrc
+     *
+     * @param string $masterCrc
+     *
+     * @return RsdbaChecksums
+     */
+    public function setMasterCrc($masterCrc)
+    {
+        $this->masterCrc = $masterCrc;
+
+        return $this;
+    }
+
+    /**
+     * Get masterCrc
+     *
+     * @return string
+     */
+    public function getMasterCrc()
+    {
+        return $this->masterCrc;
+    }
+
+    /**
+     * Set masterCnt
+     *
+     * @param integer $masterCnt
+     *
+     * @return RsdbaChecksums
+     */
+    public function setMasterCnt($masterCnt)
+    {
+        $this->masterCnt = $masterCnt;
+
+        return $this;
+    }
+
+    /**
+     * Get masterCnt
+     *
+     * @return integer
+     */
+    public function getMasterCnt()
+    {
+        return $this->masterCnt;
+    }
+
+    /**
+     * Set ts
+     *
+     * @param \DateTime $ts
+     *
+     * @return RsdbaChecksums
+     */
+    public function setTs($ts)
+    {
+        $this->ts = $ts;
+
+        return $this;
+    }
+
+    /**
+     * Get ts
+     *
+     * @return \DateTime
+     */
+    public function getTs()
+    {
+        return $this->ts;
+    }
+
+    /**
+     * Set db
+     *
+     * @param string $db
+     *
+     * @return RsdbaChecksums
+     */
+    public function setDb($db)
+    {
+        $this->db = $db;
+
+        return $this;
+    }
+
+    /**
+     * Get db
+     *
+     * @return string
+     */
+    public function getDb()
+    {
+        return $this->db;
+    }
+
+    /**
+     * Set tbl
+     *
+     * @param string $tbl
+     *
+     * @return RsdbaChecksums
+     */
+    public function setTbl($tbl)
+    {
+        $this->tbl = $tbl;
+
+        return $this;
+    }
+
+    /**
+     * Get tbl
+     *
+     * @return string
+     */
+    public function getTbl()
+    {
+        return $this->tbl;
+    }
+
+    /**
+     * Set chunk
+     *
+     * @param integer $chunk
+     *
+     * @return RsdbaChecksums
+     */
+    public function setChunk($chunk)
+    {
+        $this->chunk = $chunk;
+
+        return $this;
+    }
+
+    /**
+     * Get chunk
+     *
+     * @return integer
+     */
+    public function getChunk()
+    {
+        return $this->chunk;
+    }
+}

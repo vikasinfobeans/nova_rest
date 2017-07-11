@@ -113,5 +113,326 @@ class Problems
     private $id;
 
 
-}
 
+    /**
+     * Set zendeskid
+     *
+     * @param integer $zendeskid
+     *
+     * @return Problems
+     */
+    public function setZendeskid($zendeskid)
+    {
+        $this->zendeskid = $zendeskid;
+
+        return $this;
+    }
+
+    /**
+     * Get zendeskid
+     *
+     * @return integer
+     */
+    public function getZendeskid()
+    {
+        return $this->zendeskid;
+    }
+
+    /**
+     * Set reporterName
+     *
+     * @param string $reporterName
+     *
+     * @return Problems
+     */
+    public function setReporterName($reporterName)
+    {
+        $this->reporterName = $reporterName;
+
+        return $this;
+    }
+
+    /**
+     * Get reporterName
+     *
+     * @return string
+     */
+    public function getReporterName()
+    {
+        return $this->reporterName;
+    }
+
+    /**
+     * Set reporterEmail
+     *
+     * @param string $reporterEmail
+     *
+     * @return Problems
+     */
+    public function setReporterEmail($reporterEmail)
+    {
+        $this->reporterEmail = $reporterEmail;
+
+        return $this;
+    }
+
+    /**
+     * Get reporterEmail
+     *
+     * @return string
+     */
+    public function getReporterEmail()
+    {
+        return $this->reporterEmail;
+    }
+
+    /**
+     * Set descriptionOfProblem
+     *
+     * @param string $descriptionOfProblem
+     *
+     * @return Problems
+     */
+    public function setDescriptionOfProblem($descriptionOfProblem)
+    {
+        $this->descriptionOfProblem = $descriptionOfProblem;
+
+        return $this;
+    }
+
+    /**
+     * Get descriptionOfProblem
+     *
+     * @return string
+     */
+    public function getDescriptionOfProblem()
+    {
+        return $this->descriptionOfProblem;
+    }
+
+    /**
+     * Set browserVersion
+     *
+     * @param string $browserVersion
+     *
+     * @return Problems
+     */
+    public function setBrowserVersion($browserVersion)
+    {
+        $this->browserVersion = $browserVersion;
+
+        return $this;
+    }
+
+    /**
+     * Get browserVersion
+     *
+     * @return string
+     */
+    public function getBrowserVersion()
+    {
+        return $this->browserVersion;
+    }
+
+    /**
+     * Set ipAddress
+     *
+     * @param string $ipAddress
+     *
+     * @return Problems
+     */
+    public function setIpAddress($ipAddress)
+    {
+        $this->ipAddress = $ipAddress;
+
+        return $this;
+    }
+
+    /**
+     * Get ipAddress
+     *
+     * @return string
+     */
+    public function getIpAddress()
+    {
+        return $this->ipAddress;
+    }
+
+    /**
+     * Set operatingSystem
+     *
+     * @param string $operatingSystem
+     *
+     * @return Problems
+     */
+    public function setOperatingSystem($operatingSystem)
+    {
+        $this->operatingSystem = $operatingSystem;
+
+        return $this;
+    }
+
+    /**
+     * Get operatingSystem
+     *
+     * @return string
+     */
+    public function getOperatingSystem()
+    {
+        return $this->operatingSystem;
+    }
+
+    /**
+     * Set referringPage
+     *
+     * @param string $referringPage
+     *
+     * @return Problems
+     */
+    public function setReferringPage($referringPage)
+    {
+        $this->referringPage = $referringPage;
+
+        return $this;
+    }
+
+    /**
+     * Get referringPage
+     *
+     * @return string
+     */
+    public function getReferringPage()
+    {
+        return $this->referringPage;
+    }
+
+    /**
+     * Set libraryName
+     *
+     * @param string $libraryName
+     *
+     * @return Problems
+     */
+    public function setLibraryName($libraryName)
+    {
+        $this->libraryName = $libraryName;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryName
+     *
+     * @return string
+     */
+    public function getLibraryName()
+    {
+        return $this->libraryName;
+    }
+
+    /**
+     * Set created
+     *
+     * @param \DateTime $created
+     *
+     * @return Problems
+     */
+    public function setCreated($created)
+    {
+        $this->created = $created;
+
+        return $this;
+    }
+
+    /**
+     * Get created
+     *
+     * @return \DateTime
+     */
+    public function getCreated()
+    {
+        return $this->created;
+    }
+
+    /**
+     * Set modified
+     *
+     * @param \DateTime $modified
+     *
+     * @return Problems
+     */
+    public function setModified($modified)
+    {
+        $this->modified = $modified;
+
+        return $this;
+    }
+
+    /**
+     * Get modified
+     *
+     * @return \DateTime
+     */
+    public function getModified()
+    {
+        return $this->modified;
+    }
+
+    /**
+     * Set status
+     *
+     * @param boolean $status
+     *
+     * @return Problems
+     */
+    public function setStatus($status)
+    {
+        $this->status = $status;
+
+        return $this;
+    }
+
+    /**
+     * Get status
+     *
+     * @return boolean
+     */
+    public function getStatus()
+    {
+        return $this->status;
+    }
+
+    /**
+     * Set patronId
+     *
+     * @param string $patronId
+     *
+     * @return Problems
+     */
+    public function setPatronId($patronId)
+    {
+        $this->patronId = $patronId;
+
+        return $this;
+    }
+
+    /**
+     * Get patronId
+     *
+     * @return string
+     */
+    public function getPatronId()
+    {
+        return $this->patronId;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+}

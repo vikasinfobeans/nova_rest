@@ -99,5 +99,278 @@ class StreamingHistories
     private $id;
 
 
-}
 
+    /**
+     * Set prodid
+     *
+     * @param integer $prodid
+     *
+     * @return StreamingHistories
+     */
+    public function setProdid($prodid)
+    {
+        $this->prodid = $prodid;
+
+        return $this;
+    }
+
+    /**
+     * Get prodid
+     *
+     * @return integer
+     */
+    public function getProdid()
+    {
+        return $this->prodid;
+    }
+
+    /**
+     * Set providerType
+     *
+     * @param string $providerType
+     *
+     * @return StreamingHistories
+     */
+    public function setProviderType($providerType)
+    {
+        $this->providerType = $providerType;
+
+        return $this;
+    }
+
+    /**
+     * Get providerType
+     *
+     * @return string
+     */
+    public function getProviderType()
+    {
+        return $this->providerType;
+    }
+
+    /**
+     * Set patronId
+     *
+     * @param string $patronId
+     *
+     * @return StreamingHistories
+     */
+    public function setPatronId($patronId)
+    {
+        $this->patronId = $patronId;
+
+        return $this;
+    }
+
+    /**
+     * Get patronId
+     *
+     * @return string
+     */
+    public function getPatronId()
+    {
+        return $this->patronId;
+    }
+
+    /**
+     * Set libraryId
+     *
+     * @param integer $libraryId
+     *
+     * @return StreamingHistories
+     */
+    public function setLibraryId($libraryId)
+    {
+        $this->libraryId = $libraryId;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryId
+     *
+     * @return integer
+     */
+    public function getLibraryId()
+    {
+        return $this->libraryId;
+    }
+
+    /**
+     * Set consumedTime
+     *
+     * @param integer $consumedTime
+     *
+     * @return StreamingHistories
+     */
+    public function setConsumedTime($consumedTime)
+    {
+        $this->consumedTime = $consumedTime;
+
+        return $this;
+    }
+
+    /**
+     * Get consumedTime
+     *
+     * @return integer
+     */
+    public function getConsumedTime()
+    {
+        return $this->consumedTime;
+    }
+
+    /**
+     * Set createdon
+     *
+     * @param \DateTime $createdon
+     *
+     * @return StreamingHistories
+     */
+    public function setCreatedon($createdon)
+    {
+        $this->createdon = $createdon;
+
+        return $this;
+    }
+
+    /**
+     * Get createdon
+     *
+     * @return \DateTime
+     */
+    public function getCreatedon()
+    {
+        return $this->createdon;
+    }
+
+    /**
+     * Set userAgent
+     *
+     * @param string $userAgent
+     *
+     * @return StreamingHistories
+     */
+    public function setUserAgent($userAgent)
+    {
+        $this->userAgent = $userAgent;
+
+        return $this;
+    }
+
+    /**
+     * Get userAgent
+     *
+     * @return string
+     */
+    public function getUserAgent()
+    {
+        return $this->userAgent;
+    }
+
+    /**
+     * Set ipAddress
+     *
+     * @param string $ipAddress
+     *
+     * @return StreamingHistories
+     */
+    public function setIpAddress($ipAddress)
+    {
+        $this->ipAddress = $ipAddress;
+
+        return $this;
+    }
+
+    /**
+     * Get ipAddress
+     *
+     * @return string
+     */
+    public function getIpAddress()
+    {
+        return $this->ipAddress;
+    }
+
+    /**
+     * Set tokenId
+     *
+     * @param string $tokenId
+     *
+     * @return StreamingHistories
+     */
+    public function setTokenId($tokenId)
+    {
+        $this->tokenId = $tokenId;
+
+        return $this;
+    }
+
+    /**
+     * Get tokenId
+     *
+     * @return string
+     */
+    public function getTokenId()
+    {
+        return $this->tokenId;
+    }
+
+    /**
+     * Set actionType
+     *
+     * @param string $actionType
+     *
+     * @return StreamingHistories
+     */
+    public function setActionType($actionType)
+    {
+        $this->actionType = $actionType;
+
+        return $this;
+    }
+
+    /**
+     * Get actionType
+     *
+     * @return string
+     */
+    public function getActionType()
+    {
+        return $this->actionType;
+    }
+
+    /**
+     * Set songsQueueId
+     *
+     * @param integer $songsQueueId
+     *
+     * @return StreamingHistories
+     */
+    public function setSongsQueueId($songsQueueId)
+    {
+        $this->songsQueueId = $songsQueueId;
+
+        return $this;
+    }
+
+    /**
+     * Get songsQueueId
+     *
+     * @return integer
+     */
+    public function getSongsQueueId()
+    {
+        return $this->songsQueueId;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+}

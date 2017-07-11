@@ -57,5 +57,134 @@ class ContractLibraryStreamingPurchases
     private $id;
 
 
-}
 
+    /**
+     * Set libraryContractStartDate
+     *
+     * @param \DateTime $libraryContractStartDate
+     *
+     * @return ContractLibraryStreamingPurchases
+     */
+    public function setLibraryContractStartDate($libraryContractStartDate)
+    {
+        $this->libraryContractStartDate = $libraryContractStartDate;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryContractStartDate
+     *
+     * @return \DateTime
+     */
+    public function getLibraryContractStartDate()
+    {
+        return $this->libraryContractStartDate;
+    }
+
+    /**
+     * Set libraryContractEndDate
+     *
+     * @param \DateTime $libraryContractEndDate
+     *
+     * @return ContractLibraryStreamingPurchases
+     */
+    public function setLibraryContractEndDate($libraryContractEndDate)
+    {
+        $this->libraryContractEndDate = $libraryContractEndDate;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryContractEndDate
+     *
+     * @return \DateTime
+     */
+    public function getLibraryContractEndDate()
+    {
+        return $this->libraryContractEndDate;
+    }
+
+    /**
+     * Set libraryUnlimited
+     *
+     * @param string $libraryUnlimited
+     *
+     * @return ContractLibraryStreamingPurchases
+     */
+    public function setLibraryUnlimited($libraryUnlimited)
+    {
+        $this->libraryUnlimited = $libraryUnlimited;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryUnlimited
+     *
+     * @return string
+     */
+    public function getLibraryUnlimited()
+    {
+        return $this->libraryUnlimited;
+    }
+
+    /**
+     * Set idLibraryPurchasesStreaming
+     *
+     * @param integer $idLibraryPurchasesStreaming
+     *
+     * @return ContractLibraryStreamingPurchases
+     */
+    public function setIdLibraryPurchasesStreaming($idLibraryPurchasesStreaming)
+    {
+        $this->idLibraryPurchasesStreaming = $idLibraryPurchasesStreaming;
+
+        return $this;
+    }
+
+    /**
+     * Get idLibraryPurchasesStreaming
+     *
+     * @return integer
+     */
+    public function getIdLibraryPurchasesStreaming()
+    {
+        return $this->idLibraryPurchasesStreaming;
+    }
+
+    /**
+     * Set libraryId
+     *
+     * @param integer $libraryId
+     *
+     * @return ContractLibraryStreamingPurchases
+     */
+    public function setLibraryId($libraryId)
+    {
+        $this->libraryId = $libraryId;
+
+        return $this;
+    }
+
+    /**
+     * Get libraryId
+     *
+     * @return integer
+     */
+    public function getLibraryId()
+    {
+        return $this->libraryId;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+}

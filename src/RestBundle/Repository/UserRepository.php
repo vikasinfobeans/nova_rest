@@ -10,4 +10,6 @@ namespace RestBundle\Repository;
  */
 class UserRepository extends \Doctrine\ORM\EntityRepository
 {
+
+
 }
