@@ -1,9 +1,9 @@
 <?php
 
-	namespace RestBundle\Repository;
+namespace RestBundle\Repository;
 
-	use Doctrine\ORM\EntityRepository;
-    use Doctrine\ORM\Query;
+use Doctrine\ORM\EntityRepository;
+use Doctrine\ORM\Query;
 
 	/**
 	* SongsRepository
@@ -18,28 +18,27 @@
 		public function getSongDetails($prodId, $provider, $territory) {
 
 			$limit = 5;
-		 	$query = $this->createQueryBuilder('s')
-		 		->select("c.territory")
-		 		->leftJoin("RestBundle:Genre", "g", "WITH", "s.prodid = g.prodid")
-		 		->leftJoin("RestBundle:Countries", "c", "WITH", "s.prodid = c.prodid")
+			$query = $this->createQueryBuilder('s')
+			->select("s.prodid,s.title,s.artisttext,s.songtitle,s.advisory,s.sampleDuration,s.fulllengthDuration,s.providerType,s.sequenceNumber,s.sampleSaveasname,
+			         s.cdnpath,g.genre")
+			->leftJoin("RestBundle:Genre", "g", "WITH", "s.prodid = g.prodid")
+			->leftJoin("RestBundle:Countries", "c", "WITH", "s.prodid = c.prodid")
 
-                ->where("s.prodid =".$prodId)
-                ->andWhere("s.providerType='".$provider."'")
-                ->andWhere("c.territory='".$territory."'")
+			->where("s.referenceid =".$prodId)
+                //->andWhere("s.providerType = c.providerType")
+			->andWhere("s.fulllengthSaveasname != '' ")
+			->andWhere("s.downloadstatus = '0' ")
+			->andWhere("s.cdnpath != ''")
+			->andWhere("s.providerType='".$provider."'")
 
-                ->andWhere("s.providerType = c.providerType")
-                ->andWhere("s.fulllengthSaveasname != '' ")
-                ->andWhere("s.downloadstatus = '0' ")
-                ->andWhere("s.cdnpath != ''")
-                ->andWhere("s.cdnpath != ''")
-                ->andWhere("s.cdnpath != ''")
+                //->andWhere("c.territory='".$territory."'")
 
-                ->groupby("s.prodid")
-                ->orderBy("s.sequenceNumber","Asc")
-                ->setMaxResults( $limit )
-                ->getQuery();
+			->groupby("s.prodid")
+			->orderBy("s.sequenceNumber","Asc")
+			->setMaxResults( $limit )
+			->getQuery();
 
-            $songDetails = $query->getArrayResult();
+			$songDetails = $query->getArrayResult();
 			return $songDetails;
 
 		}
