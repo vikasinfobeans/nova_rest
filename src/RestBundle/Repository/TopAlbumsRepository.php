@@ -28,4 +28,48 @@ class TopAlbumsRepository extends \Doctrine\ORM\EntityRepository
         return $topAlbumsList;
     }
 
+
+    public function getAlbumSongsNew($prodId, $provider, $territory)
+    {
+            $countryPrefix  = $this->getCountryPrefix($territory);
+            $Album          = $this->getEntityManager()->getRepository('RestBundle:Albums');
+            $albumData      = $Album->findSongsForAlbum($prodId, $provider);
+            $albumSongs     = array();
+
+            if (!empty($albumData)) {
+                $Song = $this->getEntityManager()->getRepository('RestBundle:Songs');
+
+                foreach ($albumData as $album) {
+                    $albumSongs[$album['prodid']] = $Song->getSongDetails($album['prodid'], $provider, $territory);
+                }
+            }
+
+            foreach ($albumSongs as $k => $albumSong) {
+                foreach ($albumSong as $key => $value) {
+                    $albumSongs[$k][$key]['CdnPath'] = $value['cdnpath'];
+                    $albumSongs[$k][$key]['SaveAsName'] = $value['sampleSaveasname'];
+                    $albumSongs[$k][$key]['FullLength_Duration'] = $value['fulllengthDuration'];
+
+                    unset($albumSongs[$k][$key]['sampleDuration']);
+                    unset($albumSongs[$k][$key]['fulllengthDuration']);
+                    unset($albumSongs[$k][$key]['sequenceNumber']);
+                    unset($albumSongs[$k][$key]['title']);
+                    unset($albumSongs[$k][$key]['genre']);
+                    unset($albumSongs[$k][$key]['country']);
+                }
+            }
+            return $albumSongs;
+        }
+
+        /**
+        * Function Name : getCountryPrefix
+        * Function Description : This function is used to get the country prefix
+        */
+        public function getCountryPrefix($territory)
+        {
+            $countryPrefix = strtolower($territory) . "_";
+            return $countryPrefix;
+        }
+
+
 }
