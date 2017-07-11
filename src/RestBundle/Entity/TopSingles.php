@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * TopSingles
  *
  * @ORM\Table(name="top_singles")
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="RestBundle\Repository\TopSinglesRepository")
  */
 class TopSingles
 {
@@ -96,7 +96,7 @@ class TopSingles
     public function setProdId($prodId)
     {
         $this->prodId = $prodId;
-
+    
         return $this;
     }
 
@@ -120,7 +120,7 @@ class TopSingles
     public function setProviderType($providerType)
     {
         $this->providerType = $providerType;
-
+    
         return $this;
     }
 
@@ -144,7 +144,7 @@ class TopSingles
     public function setTerritory($territory)
     {
         $this->territory = $territory;
-
+    
         return $this;
     }
 
@@ -168,7 +168,7 @@ class TopSingles
     public function setCreated($created)
     {
         $this->created = $created;
-
+    
         return $this;
     }
 
@@ -192,7 +192,7 @@ class TopSingles
     public function setModified($modified)
     {
         $this->modified = $modified;
-
+    
         return $this;
     }
 
@@ -216,7 +216,7 @@ class TopSingles
     public function setArtistName($artistName)
     {
         $this->artistName = $artistName;
-
+    
         return $this;
     }
 
@@ -240,7 +240,7 @@ class TopSingles
     public function setAlbum($album)
     {
         $this->album = $album;
-
+    
         return $this;
     }
 
@@ -264,7 +264,7 @@ class TopSingles
     public function setLanguage($language)
     {
         $this->language = $language;
-
+    
         return $this;
     }
 
@@ -288,7 +288,7 @@ class TopSingles
     public function setSortid($sortid)
     {
         $this->sortid = $sortid;
-
+    
         return $this;
     }
 

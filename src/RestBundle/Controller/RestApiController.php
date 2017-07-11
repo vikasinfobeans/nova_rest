@@ -1,14 +1,14 @@
 <?php
-namespace RestBundle\Controller;
+	namespace RestBundle\Controller;
 
-use FOS\RestBundle\Controller\FOSRestController;
-use FOS\RestBundle\Controller\Annotations\Route;
-use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Security\Core\Exception\AccessDeniedException;
+	use FOS\RestBundle\Controller\FOSRestController;
+	use FOS\RestBundle\Controller\Annotations\Route;
+	use Symfony\Component\HttpFoundation\Request;
+	use Symfony\Component\HttpFoundation\Response;
+	use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 
-class RestApiController extends FOSRestController
-{
+	class RestApiController extends FOSRestController
+	{
 	    /**
 	     * @Route("/api")
 	     */
@@ -118,4 +118,18 @@ class RestApiController extends FOSRestController
 			return $countryPrefix;
 		}
 
-	}
+		// Function Name : topSinglesAction
+        // Function Description : This function is used to get Top Singles of Territory.
+        /**
+         * @Route("/getTopSingles/{territory}")
+         */
+        public function topSinglesAction($territory)
+        {
+            $em = $this->getDoctrine()->getManager();
+            $topSingles = $em->getRepository('RestBundle:TopSingles')
+                ->getTopSingles($territory);
+            print_r($topSingles);  die;
+            $view = $this->view($topSingles);
+            return $this->handleView($view);
+        }
+    }
