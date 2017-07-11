@@ -131,7 +131,7 @@
 
             $cache = new FilesystemAdapter();
 
-            $topSinglesInstance = $cache->getItem('Nova.TopSingles');            
+            $topSinglesInstance = $cache->getItem('Nova.TopSingles_'.$territory);            
 
             if (!$topSinglesInstance->isHit()) { 
                 $em = $this->getDoctrine()->getManager();
