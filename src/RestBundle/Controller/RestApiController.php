@@ -124,12 +124,16 @@
          * @Route("/getTopSingles/{territory}")
          */
         public function topSinglesAction($territory)
-        {
+        {  
+            if(empty($territory)){
+                $territory  = 'US';
+            }
+
             $em = $this->getDoctrine()->getManager();
             $topSingles = $em->getRepository('RestBundle:TopSingles')
                 ->getTopSingles($territory);
-            print_r($topSingles);  die;
+            #print_r($topSingles);  die;
             $view = $this->view($topSingles);
-            return $this->handleView($view);
+            return $this->handleView($view);                                                    
         }
     }
