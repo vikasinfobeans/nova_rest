@@ -6,6 +6,7 @@
 	use Symfony\Component\HttpFoundation\Request;
 	use Symfony\Component\HttpFoundation\Response;
 	use Symfony\Component\Security\Core\Exception\AccessDeniedException;
+    use Symfony\Component\Cache\Adapter\FilesystemAdapter;
 
 	class RestApiController extends FOSRestController
 	{
@@ -14,7 +15,7 @@
 	    // Function Name : getTopAlbums
 	    // Function Description : This function is used to getTopAlbums.
 	    /**
-     	* @Route("/get_top_albums/{territory}", name="get_top_albums")
+     	* @Route("/top-albums/{territory}", name="get_top_albums")
      	*/
      	public function getTopAlbumsAction($territory)
      	{
@@ -57,7 +58,7 @@
 		// Function Name : topSinglesAction
         // Function Description : This function is used to get Top Singles of Territory.
         /**
-         * @Route("/getTopSingles/{territory}")
+         * @Route("/top-singles/{territory}")
          */
         public function topSinglesAction($territory)
         {
@@ -65,16 +66,30 @@
                 $territory  = 'US';
             }
 
-            $em = $this->getDoctrine()->getManager();
-            $topSingles = $em->getRepository('RestBundle:TopSingles')
-                ->getTopSingles($territory);
-            #print_r($topSingles);  die;
+            $cache = new FilesystemAdapter();
+
+            $topSinglesInstance = $cache->getItem('Nova.TopSingles_'.$territory);
+
+            if (!$topSinglesInstance->isHit()) {
+                $em = $this->getDoctrine()->getManager();
+                $topSingles = $em->getRepository('RestBundle:TopSingles')
+                    ->getTopSingles($territory);
+                #print_r($topSingles);  die;
+                $topSinglesInstance->set($topSingles);
+                $cache->save($topSinglesInstance);
+            }
+            else{
+                $topSingles = $topSinglesInstance;
+
+            }
+
             $view = $this->view($topSingles);
             return $this->handleView($view);
+
         }
 
         /**
-		* @Route("/featuredArtist&Composer")
+		* @Route("/featured-artist-composer")
 		*/
 		public function featuredArtistAction()
 		{
