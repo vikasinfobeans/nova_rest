@@ -6,6 +6,7 @@
 	use Symfony\Component\HttpFoundation\Request;
 	use Symfony\Component\HttpFoundation\Response;
 	use Symfony\Component\Security\Core\Exception\AccessDeniedException;
+    use Symfony\Component\Cache\Adapter\FilesystemAdapter;
 
 	class RestApiController extends FOSRestController
 	{
@@ -128,12 +129,25 @@
                 $territory  = 'US';
             }
 
-            $em = $this->getDoctrine()->getManager();
-            $topSingles = $em->getRepository('RestBundle:TopSingles')
-                ->getTopSingles($territory);
-            #print_r($topSingles);  die;
+            $cache = new FilesystemAdapter();
+
+            $topSinglesInstance = $cache->getItem('Nova.TopSingles');            
+
+            if (!$topSinglesInstance->isHit()) { 
+                $em = $this->getDoctrine()->getManager();
+                $topSingles = $em->getRepository('RestBundle:TopSingles')
+                    ->getTopSingles($territory);
+                #print_r($topSingles);  die; 
+                $topSinglesInstance->set($topSingles);
+                $cache->save($topSinglesInstance);              
+            }
+            else{ 
+                $topSingles = $topSinglesInstance;               
+
+            }
+
             $view = $this->view($topSingles);
-            return $this->handleView($view);                                                    
+            return $this->handleView($view);                                                   
         }
 
         /**
