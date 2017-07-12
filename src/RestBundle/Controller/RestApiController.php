@@ -29,15 +29,15 @@ use Symfony\Component\Cache\Adapter\FilesystemAdapter;
   */
 class RestApiController extends FOSRestController
 {
-        /**
-         * This function is used to getTopAlbums.
-         *
-         * @param string $territory to load territory wise Song
-         *                          for access territory wise top albums
-         *
-         * @Route("/top-albums/{territory}", name="get_top_albums")
-         * @return                           json of top albums
-         */
+    /**
+     * This function is used to getTopAlbums.
+     *
+     * @param string $territory to load territory wise Song
+     *                          for access territory wise top albums
+     *
+     * @Route("/top-albums/{territory}", name="get_top_albums")
+     * @return                           json of top albums
+     */
     public function getTopAlbumsAction($territory)
     {
         /*Check if Territory Name is Empty or Not Mactch*/
@@ -137,7 +137,7 @@ class RestApiController extends FOSRestController
 
             if (!$featuredRepository->checkImageFileExist($featureImageURL)) {
                 $brokenImages[] = date('Y-m-d H:i:s').':' .$value['territory'].' : '
-                $brokenImages[].= 'FeatureArtist : '. $value['artistName'];
+                .'FeatureArtist : '. $value['artistName'];
                 //unset the broken images variable in the array
                 unset($featured);
             }
@@ -146,8 +146,5 @@ class RestApiController extends FOSRestController
         $response->headers->set('Content-Type', 'application/json');
 
         return $response;
-
     }
-
 }
-
