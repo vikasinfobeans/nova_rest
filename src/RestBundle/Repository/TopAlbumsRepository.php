@@ -27,7 +27,52 @@ class TopAlbumsRepository extends \Doctrine\ORM\EntityRepository
 
         return $topAlbumsList;
     }
+    /*Return the all Listed territory*/
+    public function getAllTerritory()
+    {
+        $allTerritory = array('au','bm','ca','de','gb','ie','ku','us','nz');
+        return $allTerritory;
+    }
 
+    /*return idsProviderType using albums*/
+    public function getProviderType($topAlbumsList){
+        $idsProviderType =array();
+        $id = array();
+        $type = array();
+        foreach ($topAlbumsList as $topAlbum) {
+            if ($topAlbum->getAlbum() != 0) {
+                if (empty($idsProviderType)) {
+                    $id[] = $topAlbum->getAlbum();
+                    $type[] = "'" . $topAlbum->getProviderType() . "'";
+                }
+            }
+        }
+        $idsProviderType = array('id'=>$id,'type'=>$type);
+
+        return $idsProviderType;
+    }
+    /*Get Image Cdn Url Path*/
+
+    function artworkToken($uri)
+    {
+          $gen = '5';
+          $key = 'LibrariesrockwithFreegalmusic.com!';
+
+          // add beginning forward slash to the uri
+          $uri = '/' . $uri;
+
+          // generate the token
+          $hmac = hash_hmac("sha1", $uri, $key, FALSE);
+
+          // format the hash
+          $hash = sprintf("%1.1s%20.20s", $gen, $hmac);
+
+          // append the hash to the uri
+          $uri .= "?token=$hash";
+
+          // return the token
+          return $uri;
+    }
 
     public function getAlbumSongsNew($prodId, $provider, $territory)
     {

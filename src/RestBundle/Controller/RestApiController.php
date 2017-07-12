@@ -1,127 +1,153 @@
 <?php
-	namespace RestBundle\Controller;
+ /**
+  * Src/RestBundle/Controller/RestApiController.php
+  * PHP Version 7.1
+  *
+  * @category Class
+  * @package  RestApiController
+  * @author   Vikas kale <vikas.kale12@gmail.com>
+  * @license  http://www.freegalmusic.com GNU General Public License
+  * @link     http://www.freegalmusic.com/
+  */
+namespace RestBundle\Controller;
 
-	use FOS\RestBundle\Controller\FOSRestController;
-	use FOS\RestBundle\Controller\Annotations\Route;
-	use Symfony\Component\HttpFoundation\Request;
-	use Symfony\Component\HttpFoundation\Response;
-	use Symfony\Component\Security\Core\Exception\AccessDeniedException;
-    use Symfony\Component\Cache\Adapter\FilesystemAdapter;
+use FOS\RestBundle\Controller\FOSRestController;
+use FOS\RestBundle\Controller\Annotations\Route;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Security\Core\Exception\AccessDeniedException;
+use Symfony\Component\Cache\Adapter\FilesystemAdapter;
 
-	class RestApiController extends FOSRestController
-	{
-
-
-	    // Function Name : getTopAlbums
-	    // Function Description : This function is used to getTopAlbums.
-	    /**
-     	* @Route("/top-albums/{territory}", name="get_top_albums")
-     	*/
-     	public function getTopAlbumsAction($territory)
-     	{
-     		$repository 	= $this->getDoctrine()->getRepository('RestBundle:TopAlbums');
-     		$topAlbumsList  = $repository->getTopAlbumsList($territory);
-     		if ((count($topAlbumsList) < 1) || ($topAlbumsList === false)) {
-     			$this->log('a list of top albums was not available for ' . $territory, "cache_phase2");
-     		} else {
-				// creating a list of the album ids and provider types.
-     			$ids_provider_type =array();
-     			$id 	= array();
-     			$type 	= array();
-     			foreach ($topAlbumsList as $topAlbum) {
-     				if ($topAlbum->getAlbum() != 0) {
-     					if (empty($ids_provider_type)) {
-     						$id[] 	= $topAlbum->getAlbum();
-     						$type[]	= "'".$topAlbum->getProviderType()."'";
-     					}
-     				}
-     			}
-     			$ids_provider_type = array('id'=>$id,'type'=>$type);
-				// Gets the album info for each album on the list
-     			if ($ids_provider_type != '') {
-     				$Album 	= $this->getDoctrine()->getRepository('RestBundle:Albums');
-     				$topAlbumData = $Album->getTopAlbumData($territory, $ids_provider_type);
-     			} else {
-     				$topAlbumData = array();
-     			}
-     			if (!empty($topAlbumData)) {
-     				foreach ($topAlbumData as $key => $data) {
-     					$topAlbumData[$key]['topAlbumImage'] = $data['cdnpath'] . '/' . $data['imageSaveasname'];
-     					$topAlbumData[$key]['albumSongs'] 	 = $repository->getAlbumSongsNew($data['prodid'], $data['providerType'], $territory);
-     				}
-     			}
-     		}
-     		$view = $this->view($topAlbumData);
-     		return $this->handleView($view);
-     	}
-
-		// Function Name : topSinglesAction
-        // Function Description : This function is used to get Top Singles of Territory.
+ /**
+  * MyClass Class Doc Comment
+  *
+  * @category Class
+  * @package  RestApiController
+  * @author   Vikas kale <vikas.kale@infobeans.com>
+  * @license  http://www.freegalmusic.com GNU General Public License
+  * @link     http://www.freegalmusic.com/
+  */
+class RestApiController extends FOSRestController
+{
         /**
-         * @Route("/top-singles/{territory}")
+         * This function is used to getTopAlbums.
+         *
+         * @param string $territory to load territory wise Song
+         *                          for access territory wise top albums
+         *
+         * @Route("/top-albums/{territory}", name="get_top_albums")
+         * @return                           json of top albums
          */
-        public function topSinglesAction($territory)
-        {
-            if(empty($territory)){
-                $territory  = 'US';
+    public function getTopAlbumsAction($territory)
+    {
+        /*Check if Territory Name is Empty or Not Mactch*/
+        $topAlbumRepository = $this->getDoctrine()
+            ->getRepository('RestBundle:TopAlbums');
+        $allTerritory = $topAlbumRepository->getAllTerritory();
+        if (empty($territory) || !in_array($territory, $allTerritory)) {
+            $territory = 'us';
+        }
+        $topAlbumsList = $topAlbumRepository->getTopAlbumsList($territory);
+        if ((count($topAlbumsList) < 1) || ($topAlbumsList === false)) {
+            $this->log('a list of top albums was not available for ' . $territory);
+        } else {
+            /*creating a list of the album ids and provider types.*/
+            $idsProviderType = $topAlbumRepository->getProviderType($topAlbumsList);
+            // Gets the album info for each album on the list
+            $topAlbumData = array();
+            if ($idsProviderType != '') {
+                $albumRepository = $this->getDoctrine()
+                    ->getRepository('RestBundle:Albums');
+                $topAlbumData = $albumRepository
+                    ->getTopAlbumData($territory, $idsProviderType);
             }
-
-            $cache = new FilesystemAdapter();
-
-            $topSinglesInstance = $cache->getItem('Nova.TopSingles_'.$territory);
-
-            if (!$topSinglesInstance->isHit()) {
-                $em = $this->getDoctrine()->getManager();
-                $topSingles = $em->getRepository('RestBundle:TopSingles')
-                    ->getTopSingles($territory);
-                #print_r($topSingles);  die;
-                $topSinglesInstance->set($topSingles);
-                $cache->save($topSinglesInstance);
+            if (!empty($topAlbumData)) {
+                $img ='https://music-libraryideas.secure.footprint.net';
+                foreach ($topAlbumData as $key => $data) {
+                    $topAlbumData[$key]['topAlbumImage'] = $img . $topAlbumRepository
+                    ->artworkToken($data['cdnpath'].'/'.$data['imageSaveasname']);
+                    $pd = $data['providerType'];
+                    $topAlbumData[$key]['albumSongs'] = $topAlbumRepository
+                    ->getAlbumSongsNew($data['prodid'], $pd, $territory);
+                }
             }
-            else{
-                $topSingles = $topSinglesInstance;
+        }
+        $response = new Response(json_encode($topAlbumData));
+        $response->headers->set('Content-Type', 'application/json');
+        return $response;
+    }
 
-            }
-
-            $view = $this->view($topSingles);
-            return $this->handleView($view);
-
+    /**
+     * This function is used to get Top Singles of Territory.
+     *
+     * @param string $territory for api
+     *                          for access territory wise top Singles
+     *
+     * @Route("/top-singles/{territory}")
+     * @return                            array the arry
+     */
+    public function topSinglesAction($territory)
+    {
+        if (empty($territory)) {
+            $territory = 'US';
+        }
+        $cache = new FilesystemAdapter();
+        $topSinglesInstance = $cache->getItem('Nova.TopSingles_'.$territory);
+        if (!$topSinglesInstance->isHit()) {
+            $em = $this->getDoctrine()->getManager();
+            $topSingles = $em->getRepository('RestBundle:TopSingles')
+                ->getTopSingles($territory);
+            $topSinglesInstance->set($topSingles);
+            $cache->save($topSinglesInstance);
+        } else {
+            $topSingles = $topSinglesInstance;
         }
 
-        /**
-		* @Route("/featured-artist-composer")
-		*/
-		public function featuredArtistAction()
-		{
-			global $brokenImages;
+        $view = $this->view($topSingles);
 
-			$featuredRepository = $this->getDoctrine()->getRepository('RestBundle:FeaturedArtistsComposers');
-			$fac =$featuredRepository->getFeaturedArtists();
-
-			foreach ($fac as $key => $value) {
-				$featureImageURL= $this->container->getParameter('cdn_url'). 'featuredimg/' . $value['artistImage'];
-				$featured[$key] = array(
-					'artistName'   => $value['artistName'],
-					'artistImage'  => $featureImageURL,
-					'territory'    => $value['territory'],
-					'album'        => $value['album'],
-					'language'     => $value['language'],
-					'providerType' => $value['providerType'],
-					);
-
-				if(!$featuredRepository->checkImageFileExist($featureImageURL))
-				{
-			        $brokenImages[] = date('Y-m-d H:i:s').' : ' .$value['territory'].' : ' .'Feature Artist and Composer : '. $value['artistName'];
-			        //unset the broken images variable in the array
-			        unset($featured);
-		    	}
-			}
-
-			$response = new Response(json_encode($featured));
-			$response->headers->set('Content-Type', 'application/json');
-
-			return $response;
-
-		}
+        return $this->handleView($view);
     }
+
+    /**
+     * This function is used to get Top Singles of Territory.
+     *
+     * @param string $territory for api
+     *                          for access territory wise featuredArtis
+     *
+     * @Route("/featured-artist/{territory}")
+     * @return                                return Json of featuredArtis
+     */
+    public function featuredArtistAction($territory)
+    {
+        global $brokenImages;
+        $featuredRepository = $this->getDoctrine()
+            ->getRepository('RestBundle:FeaturedArtistsComposers');
+        $fac =$featuredRepository->getFeaturedArtists();
+        foreach ($fac as $key => $value) {
+            $featureImageURL= $this->container
+                ->getParameter('cdn_url'). 'featuredimg/' . $value['artistImage'];
+            $featured[$key] = array(
+                'artistName'   => $value['artistName'],
+                'artistImage'  => $featureImageURL,
+                'territory'    => $value['territory'],
+                'album'        => $value['album'],
+                'language'     => $value['language'],
+                'providerType' => $value['providerType'],
+                );
+
+            if (!$featuredRepository->checkImageFileExist($featureImageURL)) {
+                $brokenImages[] = date('Y-m-d H:i:s').':' .$value['territory'].' : '
+                $brokenImages[].= 'FeatureArtist : '. $value['artistName'];
+                //unset the broken images variable in the array
+                unset($featured);
+            }
+        }
+        $response = new Response(json_encode($featured));
+        $response->headers->set('Content-Type', 'application/json');
+
+        return $response;
+
+    }
+
+}
 
