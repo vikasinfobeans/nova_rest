@@ -110,7 +110,7 @@ class RestApiController extends FOSRestController
 
         $view = $this->view($topSingles);
         return $this->handleView($view);
-    }
+        }
 
     /**
      * This function is used to get Top Singles of Territory.
@@ -141,7 +141,7 @@ class RestApiController extends FOSRestController
 
             if (!$featuredRepository->checkImageFileExist($featureImageURL)) {
                 $brokenImages[] = date('Y-m-d H:i:s').':' .$value['territory'].' : '
-                $brokenImages[].= 'FeatureArtist : '. $value['artistName'];
+                .'FeatureArtist : '. $value['artistName'];
                 //unset the broken images variable in the array
                 unset($featured);
             }

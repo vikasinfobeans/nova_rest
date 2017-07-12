@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "071ad75bf6e78d5aa1459aab49c51883",
+    "content-hash": "2c2c2d46effb60c9b8b003f5e9bfd880",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -1121,12 +1121,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfSymfony/FOSUserBundle.git",
-                "reference": "a1b3867bfe6de79532f08f11d40f2b6be54dfcd5"
+                "reference": "b1ea299e26e8c806b14cf6a694e601d2b8bcf388"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSUserBundle/zipball/a1b3867bfe6de79532f08f11d40f2b6be54dfcd5",
-                "reference": "a1b3867bfe6de79532f08f11d40f2b6be54dfcd5",
+                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSUserBundle/zipball/b1ea299e26e8c806b14cf6a694e601d2b8bcf388",
+                "reference": "b1ea299e26e8c806b14cf6a694e601d2b8bcf388",
                 "shasum": ""
             },
             "require": {
@@ -1190,7 +1190,7 @@
             "keywords": [
                 "User management"
             ],
-            "time": "2017-06-22 09:54:32"
+            "time": "2017-07-06T13:51:18+00:00"
         },
         {
             "name": "incenteev/composer-parameter-handler",
@@ -1381,16 +1381,16 @@
         },
         {
             "name": "jms/serializer",
-            "version": "1.7.1",
+            "version": "1.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/schmittjoh/serializer.git",
-                "reference": "4fad8bbbe76e05de3b79ffa3db027058ed3813ff"
+                "reference": "020f2a221880fba6485ca428f405846279a0470f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/schmittjoh/serializer/zipball/4fad8bbbe76e05de3b79ffa3db027058ed3813ff",
-                "reference": "4fad8bbbe76e05de3b79ffa3db027058ed3813ff",
+                "url": "https://api.github.com/repos/schmittjoh/serializer/zipball/020f2a221880fba6485ca428f405846279a0470f",
+                "reference": "020f2a221880fba6485ca428f405846279a0470f",
                 "shasum": ""
             },
             "require": {
@@ -1433,8 +1433,8 @@
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "JMS\\Serializer": "src/"
+                "psr-4": {
+                    "JMS\\Serializer\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1442,6 +1442,10 @@
                 "Apache-2.0"
             ],
             "authors": [
+                {
+                    "name": "Asmir Mustafic",
+                    "email": "goetas@gmail.com"
+                },
                 {
                     "name": "Johannes M. Schmitt",
                     "email": "schmittjoh@gmail.com"
@@ -1456,7 +1460,7 @@
                 "serialization",
                 "xml"
             ],
-            "time": "2017-05-15T08:35:42+00:00"
+            "time": "2017-07-12T06:03:24+00:00"
         },
         {
             "name": "jms/serializer-bundle",
