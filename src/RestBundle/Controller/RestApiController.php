@@ -107,8 +107,9 @@ class RestApiController extends FOSRestController
             $topSingles = $topSinglesInstance->get();
         }
 
-        $view = $this->view($topSingles);
-        return $this->handleView($view);
+        $response = new Response(json_encode($topSingles));
+        $response->headers->set('Content-Type', 'application/json');
+        return $response;        
     }
 
     /**
