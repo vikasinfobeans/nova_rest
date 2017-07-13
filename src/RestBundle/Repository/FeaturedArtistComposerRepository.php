@@ -16,10 +16,9 @@ class FeaturedArtistComposerRepository extends \Doctrine\ORM\EntityRepository
     * 
     * @return Array
     */
-	public function getFeaturedArtists()
+	public function getFeaturedArtists($territory)
 	{
   		$language = 'EN';
-  		$territory = 'US';
   		$limit = 20;
 
 		$qb = $this->createQueryBuilder('FA')

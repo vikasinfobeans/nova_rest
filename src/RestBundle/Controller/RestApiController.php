@@ -124,34 +124,53 @@ class RestApiController extends FOSRestController
     public function featuredArtistAction($territory)
     {
         global $brokenImages;
-        $featuredRepository = $this->getDoctrine()
-            ->getRepository('RestBundle:FeaturedArtistsComposers');
-        $fac =$featuredRepository->getFeaturedArtists();
-        foreach ($fac as $key => $value) {
-            $featureImageURL= $this->container
-                ->getParameter('cdn_url'). 'featuredimg/' . $value['artistImage'];
-            $featured[$key] = array(
-                'artistName'   => $value['artistName'],
-                'artistImage'  => $featureImageURL,
-                'territory'    => $value['territory'],
-                'album'        => $value['album'],
-                'language'     => $value['language'],
-                'providerType' => $value['providerType'],
-                );
 
-            if (!$featuredRepository->checkImageFileExist($featureImageURL)) {
-                $brokenImages[] = date('Y-m-d H:i:s').':' .$value['territory'].' : '
-                .'FeatureArtist : '. $value['artistName'];
-                //unset the broken images variable in the array
-                unset($featured);
+        $cache = new FilesystemAdapter();
+        $featuredArtistInstance = $cache->getItem('Nova.FeaturedArtist_'.$territory);
+
+        if (!$featuredArtistInstance->isHit())
+        {
+            $featuredRepository = $this->getDoctrine()
+            ->getRepository('RestBundle:FeaturedArtistsComposers');
+
+            $fac =$featuredRepository->getFeaturedArtists($territory);
+
+            foreach ($fac as $key => $value) {
+                $featureImageURL= $this->container
+                    ->getParameter('cdn_url'). 'featuredimg/' . $value['artistImage'];
+
+                $featured[$key] = array(
+                    'artistName'   => $value['artistName'],
+                    'artistImage'  => $featureImageURL,
+                    'territory'    => $value['territory'],
+                    'album'        => $value['album'],
+                    'language'     => $value['language'],
+                    'providerType' => $value['providerType'],
+                    );
+
+                if (!$featuredRepository->checkImageFileExist($featureImageURL)) {
+                    $brokenImages[] = date('Y-m-d H:i:s').':' .$value['territory'].' : '
+                    .'FeatureArtist : '. $value['artistName'];
+                    //unset the broken images variable in the array
+                    unset($featured);
+                }
             }
+            $featuredArtistInstance->set($featured);
+            $cache->save($featuredArtistInstance);
+        } 
+        else{
+            $featured = $featuredArtistInstance->get();
         }
+
+        
+
         $response = new Response(json_encode($featured));
         $response->headers->set('Content-Type', 'application/json');
 
         return $response;
 
     }
+
 
 }
 
