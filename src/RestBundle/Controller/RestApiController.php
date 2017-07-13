@@ -62,9 +62,9 @@ class RestApiController extends FOSRestController
                     ->getTopAlbumData($territory, $idsProviderType);
             }
             if (!empty($topAlbumData)) {
-                $img ='https://music-libraryideas.secure.footprint.net';
+                $imgPath = $this->container->getParameter('cdn_img_path');
                 foreach ($topAlbumData as $key => $data) {
-                    $topAlbumData[$key]['topAlbumImage'] = $img . $topAlbumRepository
+                    $topAlbumData[$key]['topAlbumImage'] = $imgPath . $topAlbumRepository
                     ->artworkToken($data['cdnpath'].'/'.$data['imageSaveasname']);
                     $pd = $data['providerType'];
                     $topAlbumData[$key]['albumSongs'] = $topAlbumRepository
@@ -88,7 +88,7 @@ class RestApiController extends FOSRestController
      */
     public function topSinglesAction($territory)
     {
-        if(empty($territory)){
+        if (empty($territory)) {
             $territory  = 'US';
         }
 
@@ -103,14 +103,13 @@ class RestApiController extends FOSRestController
 
             $topSinglesInstance->set($topSingles);
             $cache->save($topSinglesInstance);
-        }
-        else{
+        } else {
             $topSingles = $topSinglesInstance->get();
         }
 
         $view = $this->view($topSingles);
         return $this->handleView($view);
-        }
+    }
 
     /**
      * This function is used to get Top Singles of Territory.
