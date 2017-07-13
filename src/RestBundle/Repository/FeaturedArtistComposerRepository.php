@@ -12,34 +12,34 @@ class FeaturedArtistComposerRepository extends \Doctrine\ORM\EntityRepository
 {
 
 	/* @FunctionName : getFeaturedArtists
-    * @Desc         : get list of featured artist and composer
-    * 
-    * @return Array
-    */
+   * @Desc         : get list of featured artist and composer
+   * 
+   * @return Array
+   */
 	public function getFeaturedArtists($territory)
 	{
   		$language = 'EN';
   		$limit = 20;
 
-		$qb = $this->createQueryBuilder('FA')
-				->where('FA.territory = :territory')
-				->andWhere('FA.language = :language')
-				->setParameter('territory', $territory)
-				->setParameter('language', $language)
-				->orderBy('FA.id', 'ASC')
-				->setMaxResults($limit)
-				->getQuery();
+  		$qb = $this->createQueryBuilder('FA')
+  				->where('FA.territory = :territory')
+  				->andWhere('FA.language = :language')
+  				->setParameter('territory', $territory)
+  				->setParameter('language', $language)
+  				->orderBy('FA.id', 'ASC')
+  				->setMaxResults($limit)
+  				->getQuery();
 
 		return $qb->getArrayResult();
 	}
 
 
 	/* @FunctionName : checkImageFileExist
-    * @Desc         : check the images exist or not using CURL
-    * 
-    * @param ImageURL String 
-    * @return Boolean
-    */
+   * @Desc         : check the images exist or not using CURL
+   * 
+   * @param ImageURL String 
+   * @return Boolean
+   */
     function checkImageFileExist($imageURL) {      
      
       return true;
