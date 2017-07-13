@@ -88,8 +88,14 @@ class RestApiController extends FOSRestController
      */
     public function topSinglesAction($territory)
     {
-        if (empty($territory)) {
-            $territory  = 'US';
+        /*Check if Territory Name is Empty or Not Mactch*/
+        $topAlbumRepository = $this->getDoctrine()
+            ->getRepository('RestBundle:TopAlbums');
+
+        $allTerritory = $topAlbumRepository->getAllTerritory();
+
+        if (empty($territory) || !in_array($territory, $allTerritory)) {
+            $territory = 'US';
         }
 
         $cache = new FilesystemAdapter();
