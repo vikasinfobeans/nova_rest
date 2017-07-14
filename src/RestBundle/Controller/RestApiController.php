@@ -70,9 +70,10 @@ class RestApiController extends FOSRestController
                 foreach ($topAlbumData as $key => $data) {
                     $topAlbumData[$key]['topAlbumImage'] = $img . $topAlbumRepository
                     ->artworkToken($data['cdnpath'].'/'.$data['imageSaveasname']);
-                    $pd = $data['providerType'];
+
+                    $providerType = $data['providerType'];
                     $topAlbumData[$key]['albumSongs'] = $topAlbumRepository
-                    ->getAlbumSongsNew($data['prodid'], $pd, $territory);
+                        ->getAlbumSongsNew($data['prodid'], $providerType, $territory);
                 }
             } else {
                 $topAlbumData = array( '204' => 'No Content Found' );
