@@ -44,40 +44,29 @@ class TopAlbumsRepository extends \Doctrine\ORM\EntityRepository
             ->orderBy('TA.sortid', 'ASC')
             ->setMaxResults($limit)
             ->getQuery();
-
-        $topAlbumsList = $query->getResult();
+        $topAlbumsList = $query->getArrayResult();
 
         return $topAlbumsList;
     }
-    /**
-     * This function is used to get Top getAllTerritory
-     *
-     * @return   Array Data
-     */
 
-    public function getAllTerritory()
-    {
-        $allTerritory = array('au','bm','ca','de','gb','ie','ku','us','nz');
-        return $allTerritory;
-    }
     /**
-     * This function is used to get Top getProviderType
+     * This function is used to get Top getIdsProviderType
      *
      * @param array  $topAlbumsList for api
      *                          for access territory wise top Singles
      *
      * @return               Array Data
      */
-    public function getProviderType($topAlbumsList)
+    public function getIdsProviderType($topAlbumsList)
     {
         $idsProviderType =array();
         $id = array();
         $type = array();
         foreach ($topAlbumsList as $topAlbum) {
-            if ($topAlbum->getAlbum() != 0) {
+            if ($topAlbum['album']) {
                 if (empty($idsProviderType)) {
-                    $id[] = $topAlbum->getAlbum();
-                    $type[] = "'" . $topAlbum->getProviderType() . "'";
+                    $id[] = $topAlbum['album'];
+                    $type[] = "'" . $topAlbum['providerType']. "'";
                 }
             }
         }
