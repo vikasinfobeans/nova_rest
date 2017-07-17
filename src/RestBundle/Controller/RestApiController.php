@@ -41,44 +41,16 @@ class RestApiController extends FOSRestController
     public function getTopAlbumsAction($territory)
     {
         /*Check if Territory Name is Empty or Not Mactch*/
-        $topAlbumRepository = $this->getDoctrine()
-            ->getRepository('RestBundle:TopAlbums');
-        $allTerritory = $topAlbumRepository->getAllTerritory();
-        if (empty($territory) || !in_array($territory, $allTerritory)) {
+
+        $allTerritory = $this->get('rest.allTerritory');
+        $allTerritoryData = $allTerritory->getAllTerritoyName();
+
+        if (empty($territory) || !in_array(strtoupper($territory), $allTerritoryData)) {
             $territory = 'us';
         }
-        $topAlbumData = array();
-        $topAlbumsList = $topAlbumRepository->getTopAlbumsList($territory);
-        if ((count($topAlbumsList) < 1) || ($topAlbumsList === false)) {
-            $this->log('a list of top albums was not available for ' . $territory);
-            $topAlbumData = array( '204' => 'No Content Found' );
-        } else {
-            /*creating a list of the album ids and provider types.*/
-            $idsProviderType = $topAlbumRepository->getProviderType($topAlbumsList);
-            // Gets the album info for each album on the list
-            if ($idsProviderType != '') {
-                $albumRepository = $this->getDoctrine()
-                    ->getRepository('RestBundle:Albums');
-                $topAlbumData = $albumRepository
-                    ->getTopAlbumData($territory, $idsProviderType);
-            } else {
-                $topAlbumData = array( '204' => 'No Content Found' );
-            }
 
-            if (!empty($topAlbumData)) {
-                $img = $this->container->getParameter('cdn_img_path');
-                foreach ($topAlbumData as $key => $data) {
-                    $topAlbumData[$key]['topAlbumImage'] = $img . $topAlbumRepository
-                    ->artworkToken($data['cdnpath'].'/'.$data['imageSaveasname']);
-
-                    $providerType = $data['providerType'];
-                    $topAlbumData[$key]['albumSongs'] = $topAlbumRepository
-                        ->getAlbumSongsNew($data['prodid'], $providerType, $territory);
-                }
-            } else {
-                $topAlbumData = array( '204' => 'No Content Found' );
-            }
-        }
+        $albumsService = $this->get('rest.topAlbums');
+        $topAlbumData = $albumsService->getTopAlbumsData($territory);
 
         $response = new Response(json_encode($topAlbumData));
 
@@ -100,9 +72,10 @@ class RestApiController extends FOSRestController
         $topAlbumRepository = $this->getDoctrine()
             ->getRepository('RestBundle:TopAlbums');
 
-        $allTerritory = $topAlbumRepository->getAllTerritory();
+        $allTerritory = $this->get('rest.allTerritory');
+        $allTerritoryData = $allTerritory->getAllTerritoyName();
 
-        if (empty($territory) || !in_array($territory, $allTerritory)) {
+        if (empty($territory) || !in_array(strtoupper($territory), $allTerritoryData)) {
             $territory = 'US';
         }
 
