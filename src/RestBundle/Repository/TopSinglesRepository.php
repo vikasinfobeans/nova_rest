@@ -12,7 +12,7 @@ class TopSinglesRepository extends \Doctrine\ORM\EntityRepository
 {
 	//	Get All Top Singles
     public function getTopSingles($territory)
-    {		
+    {	
         $topSinglesList = $this->getTopSinglesOfTerritory($territory);
 
         if(count($topSinglesList)>0){
