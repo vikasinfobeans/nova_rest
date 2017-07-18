@@ -68,9 +68,7 @@ class RestApiController extends FOSRestController
      */
     public function topSinglesAction($territory)
     {
-        /*Check if Territory Name is Empty or Not Mactch*/
-        $topAlbumRepository = $this->getDoctrine()
-            ->getRepository('RestBundle:TopAlbums');
+        /*Check if Territory Name is Emspty or Not Mactch*/
 
         $allTerritory = $this->get('rest.allTerritory');
         $allTerritoryData = $allTerritory->getAllTerritoyName();
