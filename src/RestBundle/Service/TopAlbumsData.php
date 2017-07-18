@@ -20,7 +20,7 @@ class TopAlbumsData
      * @param EntityManager $entityManager
      * @param bool          $requireImagesToPromoteCar
      */
-    public function __construct(EntityManager $entityManager,ContainerInterface $container)
+    public function __construct(EntityManager $entityManager, ContainerInterface $container)
     {
         $this->em = $entityManager;
         $this->container = $container;

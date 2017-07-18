@@ -112,7 +112,7 @@ class RestApiController extends FOSRestController
         //$cache = new FilesystemAdapter();
         //$featuredArtistInstance = $cache->getItem('Nova.FeaturedArtist_'.$territory);
         //if (!$featuredArtistInstance->isHit()) {
-        
+
             $featured = $this->get('rest.featuredArtist');
             //$em = $fa->getDoctrine()->getEntityManager();
            $result =  $featured->featuredArtistImgUrl($territory);
