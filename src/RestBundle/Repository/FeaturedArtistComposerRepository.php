@@ -20,7 +20,7 @@ class FeaturedArtistComposerRepository extends \Doctrine\ORM\EntityRepository
 	{
   		$language = 'EN';
   		$limit = 20;
-
+      
   		$qb = $this->createQueryBuilder('FA')
   				->where('FA.territory = :territory')
   				->andWhere('FA.language = :language')
@@ -30,7 +30,13 @@ class FeaturedArtistComposerRepository extends \Doctrine\ORM\EntityRepository
   				->setMaxResults($limit)
   				->getQuery();
 
-		return $qb->getArrayResult();
+    $result =  $qb->getArrayResult(); 
+    
+    
+    if(empty($result))    
+      $result = array( '204' => 'No Content Found' );    
+ 
+    return $result;
 	}
 
 
