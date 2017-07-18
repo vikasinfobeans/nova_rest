@@ -8,8 +8,11 @@ services:
         arguments: [ "@doctrine.orm.entity_manager","@service_container"]
 
     rest.featuredArtist:
-        class: RestBundle\Service\FeaturedArtist
+        class: RestBundle\services\FeaturedArtist
         #arguments: ["@service_id", "plain_value", "%parameter%"]
-        arguments: [ "@doctrine.orm.entity_manager", "@service_container" ]
+        arguments: [ "@doctrine.orm.entity_manager", "@service_container" ]		
+    rest.topSinglesData:
+        class: RestBundle\Service\TopSinglesData
+        arguments: [ "@doctrine.orm.entity_manager", "@service_container"]
 
 
