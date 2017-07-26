@@ -14,8 +14,10 @@ class FeaturedArtist
         $this->default_em   = $entityManager;
         $this->container  = $container;
     }
-    public function featuredArtistImgUrl($territory)
+    
+    public function featuredArtistData($territory)
     {
+        global $brokenImages;
         $featuredRepository = $this->default_em
             ->getRepository('RestBundle:FeaturedArtistsComposers');
 

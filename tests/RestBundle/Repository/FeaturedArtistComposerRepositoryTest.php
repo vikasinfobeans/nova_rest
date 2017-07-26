@@ -34,6 +34,17 @@ class FeaturedArtistComposerRepository extends KernelTestCase
 
 	}
 
+	public function testFearuredArtistImg()
+	{
+		global $imgUrl;
+		//$imgUrl = "https:\/\/music-libraryideas.secure.footprint.net\/freegalmusic\/prod\/EN\/featuredimg\/adele.png";
+		$result = $this->em
+				->getRepository("RestBundle:FeaturedArtistsComposers")
+				->checkImageFileExist($imgUrl);
+				//echo "hello:-".$imgUrl;die;
+		$this->assertTrue($result == false);		
+	}
+
 	/**
      * {@inheritDoc}
      */

@@ -32,7 +32,7 @@ class TopSinglesRepository extends \Doctrine\ORM\EntityRepository
     public function getTopSinglesOfTerritory($territory)
     {		
         $language = 'EN';
-        $limit = 10;
+        $limit = 2;
         $query = $this->createQueryBuilder('ts')
                 ->where('ts.territory = :territory')
                 ->andWhere('ts.language= :language')
@@ -79,7 +79,7 @@ class TopSinglesRepository extends \Doctrine\ORM\EntityRepository
 
         $query = $this->getEntityManager()->createQueryBuilder();
         $query->select("S.prodid, S.referenceid, S.title, S.artisttext, S.songtitle, S.advisory, S.sampleDuration, S.fulllengthDuration, S.providerType, S.fulllengthSaveasname, S.sampleSaveasname, S.cdnpath, C.territory, C.salesdate, C.streamingsalesdate, C.streamingstatus, C.downloadstatus, P.pid,
-A.prodid, A.providerType, G.genre, TS.sortid")                
+            A.prodid, A.providerType, G.genre, TS.sortid")                
                 ->from("RestBundle:Songs", "S")
                 ->Join("RestBundle:TopSingles", "TS", "WITH", "TS.prodId = S.prodid AND TS.territory = '".$territory."'")
                 ->leftJoin("RestBundle:Genre", "G", "WITH", "G.prodid = S.prodid  AND G.providerType = S.providerType")

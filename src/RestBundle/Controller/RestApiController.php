@@ -108,20 +108,29 @@ class RestApiController extends FOSRestController
      */
     public function featuredArtistAction($territory)
     {
-        global $brokenImages;
-        //$cache = new FilesystemAdapter();
-        //$featuredArtistInstance = $cache->getItem('Nova.FeaturedArtist_'.$territory);
-        //if (!$featuredArtistInstance->isHit()) {
+        /*Check if Territory Name is Emspty or Not Mactch*/
+
+        $allTerritory = $this->get('rest.allTerritory');
+        $allTerritoryData = $allTerritory->getAllTerritoyName();
+
+        if (empty($territory) || !in_array(strtoupper($territory), $allTerritoryData)) {
+            $territory = 'US';
+        }
+        
+        $cache = new FilesystemAdapter();
+        $featuredArtistInstance = $cache->getItem('Nova.FeaturedArtist_'.$territory);
+        if (!$featuredArtistInstance->isHit()) {
 
             $featured = $this->get('rest.featuredArtist');
-            //$em = $fa->getDoctrine()->getEntityManager();
-           $result =  $featured->featuredArtistImgUrl($territory);
+            $result =  $featured->featuredArtistData($territory);
 
-            //$featuredArtistInstance->set($featured);
-           // $cache->save($featuredArtistInstance);
-       // } else {
-       //     $featured = $featuredArtistInstance->get();
-       // }
+            $featuredArtistInstance->set($featured);
+            $cache->save($featuredArtistInstance);
+        } else {
+           $result = $featuredArtistInstance->get();
+        }
+
+        
         $response = new Response(json_encode($result));
 
         return $response;

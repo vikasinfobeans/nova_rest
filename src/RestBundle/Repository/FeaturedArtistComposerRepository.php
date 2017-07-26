@@ -32,7 +32,6 @@ class FeaturedArtistComposerRepository extends \Doctrine\ORM\EntityRepository
 
     $result =  $qb->getArrayResult(); 
     
-    
     if(empty($result))    
       $result = array( '204' => 'No Content Found' );    
  
@@ -48,7 +47,20 @@ class FeaturedArtistComposerRepository extends \Doctrine\ORM\EntityRepository
    */
     function checkImageFileExist($imageURL) {      
      
-      return true;
+   
+      $ch = curl_init();
+      curl_setopt($ch, CURLOPT_URL,$imageURL);
+      // don't download content
+      curl_setopt($ch, CURLOPT_NOBODY, 1);
+      curl_setopt($ch, CURLOPT_FAILONERROR, 1);
+      curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+      if(curl_exec($ch)!==FALSE) {
+          return true;
+      }else{
+          return false;
+      }      
+       
+      //return true;
     }
 
 
