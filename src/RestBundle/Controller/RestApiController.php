@@ -76,23 +76,9 @@ class RestApiController extends FOSRestController
         if (empty($territory) || !in_array(strtoupper($territory), $allTerritoryData)) {
             $territory = 'US';
         }
-
-        $cache = new FilesystemAdapter();
-
-        $topSinglesInstance = $cache->getItem('Nova.TopSingles_'.$territory);
-
-        if (!$topSinglesInstance->isHit()) {
-            $em = $this->getDoctrine()->getManager();
-            $topSingles = $em->getRepository('RestBundle:TopSingles')
-                ->getTopSingles($territory);
-
-            $topSinglesInstance->set($topSingles);
-            $cache->save($topSinglesInstance);
-        } else {
-            $topSingles = $topSinglesInstance->get();
-        }
-
-        $response = new Response(json_encode($topSingles));
+        $topSinglesService = $this->get('rest.topSinglesData');
+        $result =  $topSinglesService->getTopSingles($territory);
+        $response = new Response(json_encode($result));
 
         return $response;
     }
